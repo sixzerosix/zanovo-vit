@@ -8,6 +8,7 @@ import { mapMotion } from './scripts/motions/map.ts'
 import { initMotionText } from './scripts/motions/text.ts'
 import { paralaxImage } from './scripts/motions/paralax.ts'
 import { curtainPanel } from './scripts/motions/curtain.ts'
+import { initHeaderAnimations } from './scripts/motions/header.ts'
 import Alpine from 'alpinejs'
 
 // Alpine init ___
@@ -56,5 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	initMotionText()
 	paralaxImage()
 	curtainPanel()
+	initHeaderAnimations()
 
 })
