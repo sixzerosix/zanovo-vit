@@ -50,14 +50,15 @@
 		</div>
 	</header>
 
-	<div class="bg-slate-950 w-full h-screen">
+	<section class="bg-slate-950 w-full h-screen">
 		<section class="py-20 h-full">
 			<div class="px-20 h-full flex flex-col justify-end">
-				<h1 class="main-title !text-9xl font-medium text-white uppercase">Начни всё заново</h1>
+				<h1 class="!text-9xl text-white uppercase">Начни <br> всё заново</h1>
+				<!-- <h1 class="main-title !text-9xl font-medium text-white uppercase">Начни всё заново</h1> -->
 
 			</div>
 		</section>
-	</div>
+	</section>
 
 	<section class="bg-slate-white w-full min-h-screen py-24">
 		<div class="max-w-[1760px] mx-auto px-12 box-content">
@@ -438,6 +439,104 @@
 
 	</section>
 
+	<section class="bg-slate-white w-full min-h-screen py-24">
+		<div class="max-w-[1760px] mx-auto px-12 box-content">
+			<div class="grid grid-cols-3 gap-20">
+
+				<div class="col-span-1 grid gap-12">
+					<div class="grid gap-6">
+						<h2 class="motion-text-fadeup max-w-xl text-[56px] capitalize leading-[1.14]">Частые вопросы
+						</h2>
+						<div class="motion-text-fadeup text-3xl leading-[1.5]">Остались вопросы касаемо вашего случая?
+						</div>
+					</div>
+					<div>
+						<button
+							class="text-nowrap flex items-center h-24 !px-12 !bg-slate-950 !text-xl text-white !rounded-full !font-normal">
+							<span>Задать вопрос</span>
+						</button>
+					</div>
+				</div>
+				<div class="col-span-2">
+					<div class="motion-blocks-fadeup" data-accordion>
+
+
+						<!-- Item 1 -->
+						<div class="accordion-item border-b border-gray-200">
+							<button
+								class="accordion-trigger w-full py-6 text-left flex justify-between items-center text-lg font-medium hover:bg-gray-50 transition-colors duration-200 group"
+								data-accordion-trigger>
+								<span class="pr-4 group-hover:text-blue-600 transition-colors">Стоимость процедуры
+									банкротства</span>
+								<span class="accordion-icon text-3xl text-blue-600 origin-center block">+</span>
+							</button>
+
+							<!-- Важно: overflow-hidden на обертке, паддинги внутри -->
+							<div class="accordion-content overflow-hidden h-0" data-accordion-content
+								style="height: 0;">
+								<div class="px-0 pb-8 pt-4 text-gray-600 leading-relaxed">
+									Стоимость за процедуру банкротства «под ключ» зависит от региона, сложности дела,
+									суммы долга и включает в себя оплату обязательных платежей, услуг арбитражного
+									управляющего и юристов за сопровождение. Поэтому фиксированной стоимости нет.
+									Наша компания предоставляет рассрочку на оплату с комфортным ежемесячным платежом.
+								</div>
+							</div>
+						</div>
+
+						<!-- Item 2 -->
+						<div class="accordion-item border-b border-gray-200">
+							<button
+								class="accordion-trigger w-full py-6 text-left flex justify-between items-center text-lg font-medium hover:bg-gray-50 transition-colors duration-200 group"
+								data-accordion-trigger>
+								<span class="pr-4 group-hover:text-blue-600 transition-colors">Сколько длится
+									процедура?</span>
+								<span class="accordion-icon text-3xl text-blue-600 origin-center block">+</span>
+							</button>
+
+							<div class="accordion-content overflow-hidden h-0" data-accordion-content
+								style="height: 0;">
+								<div class="px-0 pb-8 pt-4 text-gray-600 leading-relaxed">
+									Обычно от 8 до 12 месяцев. Всё зависит от количества кредиторов и сложности дела.
+									<br><br>
+									Мы стараемся ускорить процесс, своевременно подавая все необходимые документы в суд
+									и контролируя работу финансового управляющего.
+								</div>
+							</div>
+						</div>
+
+						<!-- Item 3 (Long content test) -->
+						<div class="accordion-item border-b border-gray-200">
+							<button
+								class="accordion-trigger w-full py-6 text-left flex justify-between items-center text-lg font-medium hover:bg-gray-50 transition-colors duration-200 group"
+								data-accordion-trigger>
+								<span class="pr-4 group-hover:text-blue-600 transition-colors">Какие последствия?</span>
+								<span class="accordion-icon text-3xl text-blue-600 origin-center block">+</span>
+							</button>
+
+							<div class="accordion-content overflow-hidden h-0" data-accordion-content
+								style="height: 0;">
+								<div class="px-0 pb-8 pt-4 text-gray-600 leading-relaxed">
+									<p class="mb-4">Основные последствия, о которых стоит знать:</p>
+									<ul class="list-disc pl-5 space-y-2">
+										<li>В течение 5 лет нужно сообщать банкам о факте банкротства при взятии
+											кредита.</li>
+										<li>В течение 3 лет нельзя занимать руководящие должности в юридических лицах
+											(Гендиректор, член Совета директоров).</li>
+										<li>В течение 5 лет нельзя повторно подать на банкротство.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+
 	<!-- Боковое меню -->
 	<nav id="mobileMenu"
 		class="fixed top-0 right-0 h-full w-2xl max-w-full bg-white shadow-2xl translate-x-full z-[9999]">
@@ -451,12 +550,6 @@
 			</ul>
 		</div>
 	</nav>
-
-
-
-	<!-- Кнопки открытия -->
-
-
 
 
 	<!-- Любая модалка -->

@@ -16,6 +16,7 @@ import { initMenu } from './scripts/motions/menu.ts'
 import "./scripts/motions/overlay.ts"
 import "./scripts/motions/modal.ts"
 import { initSounds } from './scripts/motions/soundclick.ts'
+import { initAccordion } from './scripts/motions/accordion.ts'
 
 // Alpine init ___
 window.Alpine = Alpine
@@ -71,4 +72,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	initMotionBlocks()
 	initMenu()
 	initSounds()
+	initAccordion()
 })

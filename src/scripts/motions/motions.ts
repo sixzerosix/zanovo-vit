@@ -42,44 +42,50 @@ tl.addLabel('start')
 
 // Title motion ___
 export function heroTitle(titleElement: HTMLDivElement) {
-	// Main title test
-	function splitWordsToSpans(el) {
-		const text = el.textContent.trim();
-		// Разбиваем по пробелам, но сохраняем последовательность пробелов/символов
-		// Простая техника: split по " " и потом соединяем с &nbsp; при вставке.
-		const words = text.split(/\s+/);
-		el.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
-		// После вставки оставляем реальные пробелы между span'ами (браузер поставит обычный пробел)
+	try {
+
+		// Main title test
+		function splitWordsToSpans(el) {
+			const text = el.textContent.trim();
+			// Разбиваем по пробелам, но сохраняем последовательность пробелов/символов
+			// Простая техника: split по " " и потом соединяем с &nbsp; при вставке.
+			const words = text.split(/\s+/);
+			el.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+			// После вставки оставляем реальные пробелы между span'ами (браузер поставит обычный пробел)
+		}
+
+
+		;
+		splitWordsToSpans(titleElement);
+
+		const words = gsap.utils.toArray('.main-title .word');
+
+		// Timeline: слова исчезают по очереди. scrub: true связывает прогресс анимации со скроллом.
+		const tlTitle = gsap.timeline({
+			scrollTrigger: {
+				trigger: titleElement,
+				start: "top 60%",   // когда верх заголовка достигнет 60% высоты вьюпорта — старт
+				end: "bottom 10%",  // скролл-длина анимации (регулирует скорость исчезания)
+				scrub: 0.6,         // плавное связывание прогресса со скроллом
+				// markers: true,   // включите для отладки
+			}
+		});
+
+		// Анимация: каждый спан уходит вверх, уменьшается и теряет opacity
+		tlTitle.to(words, {
+			y: "-=300",
+			opacity: 0,
+			scale: 0.9,
+			transformOrigin: "center center",
+			ease: "power1.out",
+			stagger: {
+				each: 0.04,   // интервал между словами в секундах (в timeline-прогрессе)
+				from: "start"
+			}
+		}, 0);
+
+	} catch (error) {
+		console.error("Error in heroTitle motion:", error);
 	}
-
-
-	;
-	splitWordsToSpans(titleElement);
-
-	const words = gsap.utils.toArray('.main-title .word');
-
-	// Timeline: слова исчезают по очереди. scrub: true связывает прогресс анимации со скроллом.
-	const tlTitle = gsap.timeline({
-		scrollTrigger: {
-			trigger: titleElement,
-			start: "top 60%",   // когда верх заголовка достигнет 60% высоты вьюпорта — старт
-			end: "bottom 10%",  // скролл-длина анимации (регулирует скорость исчезания)
-			scrub: 0.6,         // плавное связывание прогресса со скроллом
-			// markers: true,   // включите для отладки
-		}
-	});
-
-	// Анимация: каждый спан уходит вверх, уменьшается и теряет opacity
-	tlTitle.to(words, {
-		y: "-=300",
-		opacity: 0,
-		scale: 0.9,
-		transformOrigin: "center center",
-		ease: "power1.out",
-		stagger: {
-			each: 0.04,   // интервал между словами в секундах (в timeline-прогрессе)
-			from: "start"
-		}
-	}, 0);
 }
 // ___ Title motion
