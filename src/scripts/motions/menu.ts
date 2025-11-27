@@ -34,7 +34,8 @@ function toggleMenu() {
 
 function openMenu() {
 	isOpen = true;
-	body.classList.add("overflow-hidden");
+	// body.classList.add("overflow-hidden");
+
 	document.documentElement.classList.add("menu-open");
 	showOverlay(closeMenu);  // ← вот и вся магия!
 	menuTl.play();
@@ -50,7 +51,8 @@ function closeMenu() {
 	// Скрываем меню и убираем классы только после завершения анимации
 	menuTl.eventCallback("onReverseComplete", () => {
 		gsap.set(menu, { display: "none" });
-		body.classList.remove("overflow-hidden");
+		// body.classList.remove("overflow-hidden");
+
 		document.documentElement.classList.remove("menu-open");
 		menuTl.eventCallback("onReverseComplete", null); // очищаем
 	});

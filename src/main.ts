@@ -14,6 +14,7 @@ import { initTextLiftHover, initTextPressUp } from './scripts/motions/texthover.
 import { initMotionBlocks } from './scripts/motions/block.ts'
 import { initMenu } from './scripts/motions/menu.ts'
 import "./scripts/motions/overlay.ts"
+import "./scripts/motions/modal.ts"
 
 // Alpine init ___
 window.Alpine = Alpine
@@ -24,6 +25,8 @@ Alpine.start()
 const lenis = new Lenis({
 	autoRaf: true,
 });
+
+window.lenis = lenis; // for debug
 
 // Listen for the scroll event and log the event data
 lenis.on('scroll', (e) => {
