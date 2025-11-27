@@ -10,6 +10,10 @@ import { paralaxImage } from './scripts/motions/paralax.ts'
 import { curtainPanel } from './scripts/motions/curtain.ts'
 import { initHeaderAnimations } from './scripts/motions/header.ts'
 import Alpine from 'alpinejs'
+import { initTextLiftHover, initTextPressUp } from './scripts/motions/texthover.ts'
+import { initMotionBlocks } from './scripts/motions/block.ts'
+import { initMenu } from './scripts/motions/menu.ts'
+import "./scripts/motions/overlay.ts"
 
 // Alpine init ___
 window.Alpine = Alpine
@@ -58,5 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	paralaxImage()
 	curtainPanel()
 	initHeaderAnimations()
-
+	initTextLiftHover()
+	initTextPressUp()
+	initMotionBlocks()
+	initMenu()
 })
