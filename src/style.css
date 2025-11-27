@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+	--color-gold: #e4cda0;
+	--color-gold-light: #f1e0be;
+}
+
 // Fonts
 @font-face {
 	font-family: "Unbounded";
@@ -159,4 +164,15 @@ button:focus-visible {
 }
 .is-open .accordion-icon {
 	color: rgb(29 78 216); /* blue-700 */
+}
+
+/* Preloader */
+
+/* Золотой градиент для текста/линий если нужно будет расширить */
+.gold-text {
+	color: #e4cda0;
+}
+
+.gold-bg {
+	background-color: #e4cda0;
 }

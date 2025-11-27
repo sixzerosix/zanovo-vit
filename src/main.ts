@@ -15,6 +15,7 @@ import { initMotionBlocks } from './scripts/motions/block.ts'
 import { initMenu } from './scripts/motions/menu.ts'
 import "./scripts/motions/overlay.ts"
 import "./scripts/motions/modal.ts"
+import "./scripts/motions/preloader.ts"
 import { initSounds } from './scripts/motions/soundclick.ts'
 import { initAccordion } from './scripts/motions/accordion.ts'
 
