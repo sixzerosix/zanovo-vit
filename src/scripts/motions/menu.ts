@@ -24,6 +24,10 @@ export function initMenu() {
 	toggleBtn.addEventListener("click", toggleMenu);
 	menuCloseBtn.addEventListener("click", closeMenu);
 
+	document.addEventListener("keydown", e => {
+		if (e.key === "Escape") closeMenu();
+	});
+
 	// Закрытие по клику на overlay (автоматически через showOverlay)
 	// Больше не нужно вручную вешать overlay.addEventListener("click", closeMenu);
 }

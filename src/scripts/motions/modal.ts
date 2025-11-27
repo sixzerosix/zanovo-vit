@@ -14,7 +14,7 @@ function close() {
 
 	gsap.to(current, {
 		opacity: 0,
-		scale: 0.9,
+		scale: 1,
 		y: 50,
 		duration: 0.4,
 		ease: "back.in(1.4)",
@@ -42,6 +42,7 @@ function open(modal: HTMLElement) {
 
 	gsap.fromTo(modal,
 		{ opacity: 0, scale: 0.9, y: 50 },
+		// { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power1.inOut" }
 		{ opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.6)" }
 	);
 
@@ -50,6 +51,7 @@ function open(modal: HTMLElement) {
 		gsap.fromTo(content,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, stagger: 0.05, duration: 0.4, delay: 0.2 }
+			// { opacity: 1, y: 0, stagger: 0.05, duration: 0.4, delay: 0.2 }
 		);
 	}
 
