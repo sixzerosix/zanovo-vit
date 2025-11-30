@@ -2,64 +2,85 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function paralaxImage() {
-	gsap.utils.toArray(".parallax-wrapper").forEach((wrapper: any) => {
-		const elements = wrapper.querySelectorAll("[class*='will-parallax'], [data-speed]");
+export function parallaxUniversal() {
+	gsap.utils.toArray(".parallax-wrapper").forEach((wrapper: HTMLElement) => {
+		const targets = wrapper.querySelectorAll("[data-speed], .will-parallax");
 
-		elements.forEach((el: any) => {
+		targets.forEach((el: HTMLElement) => {
 			let speed = 1;
 
+			// Читаем скорость
 			if (el.dataset.speed !== undefined) {
 				speed = parseFloat(el.dataset.speed);
 			} else if (el.classList.contains("will-parallax")) {
-				const depth = el.closest('[data-depth]')
-					? parseFloat(el.closest('[data-depth]').dataset.depth)
+				const depth = el.closest("[data-depth]")
+					? parseFloat(el.closest("[data-depth]")!.dataset.depth || "1")
 					: 1;
-				speed = 1 + (0.3 * depth);
+				speed = 1 + 0.3 * depth;
 			}
 
-			// Ключевой момент: считаем реальные размеры
+			// Определяем, что внутри: img, video или просто блок
 			const img = el.tagName === "IMG" ? el : el.querySelector("img");
-			if (!img) return;
+			const video = el.tagName === "VIDEO" ? el : el.querySelector("video");
 
-			// Ждём, пока изображение загрузится (важно для правильного naturalHeight)
-			if (img.complete && img.naturalHeight !== 0) {
-				initParallax();
-			} else {
-				img.onload = initParallax;
-			}
+			const media = img || video;
 
-			function initParallax() {
+			// Функция инициализации параллакса
+			const init = () => {
 				const wrapperH = wrapper.offsetHeight;
-				const imgH = img.naturalHeight || img.offsetHeight;
-				const imgW = img.naturalWidth || img.offsetWidth;
+				let contentH = el.offsetHeight;
 
-				const currentScale = img.offsetHeight / imgH; // насколько увеличено изображение
-				const visibleImgH = wrapperH / currentScale; // сколько реально видно по высоте
+				// Если есть изображение или видео — считаем его реальные размеры
+				if (media) {
+					const naturalH = (media as HTMLImageElement | HTMLVideoElement).naturalHeight
+						|| (media as HTMLVideoElement).videoHeight
+						|| media.offsetHeight;
 
-				// Максимально допустимый сдвиг вверх (чтобы не вылезло пустое место)
-				const maxShift = Math.max(0, imgH - visibleImgH);
+					const scale = media.offsetHeight / naturalH;
+					const visibleH = wrapperH / scale;
+					const maxShift = Math.max(0, naturalH - visibleH);
 
-				// Сколько "должно" сместиться по формуле
-				const theoreticalShift = wrapperH * (speed - 1);
+					const theoreticalShift = wrapperH * (speed - 1);
+					const safeShift = Math.min(theoreticalShift, maxShift);
+					const safeSpeed = 1 + safeShift / wrapperH;
 
-				// Ограничиваем — не больше, чем позволяет изображение
-				const safeShift = Math.min(theoreticalShift, maxShift);
+					applyParallax(el, safeSpeed, wrapper);
+				} else {
+					// Если это просто блок — параллакс по высоте блока (без ограничений)
+					applyParallax(el, speed, wrapper);
+				}
+			};
 
-				// Финальный коэффициент скорости (может быть меньше, чем запрошено)
-				const safeSpeed = 1 + safeShift / wrapperH;
-
-				gsap.to(el, {
-					yPercent: -100 * (safeSpeed - 1),
+			// Универсальная анимация
+			const applyParallax = (target: HTMLElement, finalSpeed: number, trigger: HTMLElement) => {
+				gsap.to(target, {
+					yPercent: -100 * (finalSpeed - 1),
 					ease: "none",
 					scrollTrigger: {
-						trigger: wrapper,
+						trigger: trigger,
 						start: "top bottom",
 						end: "bottom top",
 						scrub: true,
-						invalidateOnRefresh: true, // пересчитываем при ресайзе
+						invalidateOnRefresh: true,
 					}
 				});
+			};
+
+			// Ждём загрузки медиа
+			if (media) {
+				if (img && (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalHeight) {
+					init();
+				} else if (video && (video as HTMLVideoElement).readyState >= 2) { // HAVE_CURRENT_DATA
+					init();
+				} else {
+					// Ждём загрузки
+					media.addEventListener("load", init, { once: true });
+					media.addEventListener("loadeddata", init, { once: true });
+					media.addEventListener("canplay", init, { once: true });
+				}
+			} else {
+				// Просто блок — сразу запускаем
+				init();
 			}
 		});
 	});
