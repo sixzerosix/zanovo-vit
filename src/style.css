@@ -1,65 +1,78 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
-@theme {
-	--color-gold: #e4cda0;
-	--color-gold-light: #f1e0be;
-}
+/* @plugin "daisyui"; */
 
 // Fonts
 @font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Black.woff2") format("woff2");
-	font-weight: 900;
+	font-family: "VeranoSans";
+	src: url("src/fonts/VeranoSans-SemiBold.woff2") format("woff2");
+	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Light.woff2") format("woff2");
-	font-weight: 200;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Blond.woff2") format("woff2");
+	font-family: "VeranoSans";
+	src: url("src/fonts/VeranoSans-Light.woff2") format("woff2");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Medium.woff2") format("woff2");
+	font-family: "VeranoSans";
+	src: url("src/fonts/VeranoSans-Italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "VeranoSans";
+	src: url("src/fonts/VeranoSans-Medium.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Unbounded";
-	src: url("src/fonts/Unbounded-Regular.woff2") format("woff2");
+	font-family: "VeranoSans";
+	src: url("src/fonts/VeranoSans-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "Mak";
+	src: url("src/fonts/Mak.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Mak";
+	src: url("src/fonts/Mak-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--color-gold: #e4cda0;
+	--color-gold-light: #f1e0be;
+
+	--font-verano-sans: "VeranoSans", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, sans-serif;
+	--font-mak: "Mak", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		sans-serif;
+}
+
 :root {
-	font-family: "Unbounded", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, sans-serif !important;
+	font-family: var(--font-verano-sans) !important;
 	line-height: 1.5;
 	font-weight: 400;
+	letter-spacing: 0.05em;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
@@ -72,12 +85,8 @@
 }
 
 a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
 }
 
 body {
@@ -85,7 +94,6 @@ body {
 }
 
 h1 {
-	font-size: 3.2em;
 	line-height: 1.1;
 }
 
@@ -142,7 +150,6 @@ button:focus-visible {
 		background-color: #ffffff;
 	}
 	a:hover {
-		color: #747bff;
 	}
 	s button {
 		background-color: #f9f9f9;
@@ -176,3 +183,32 @@ button:focus-visible {
 .gold-bg {
 	background-color: #e4cda0;
 }
+
+/* Self */
+
+/* Frame 8 */
+
+/* Auto layout */
+.title-xl {
+	@apply text-8xl text-center font-mak leading-[1.1];
+}
+
+/* .section-header {
+} */
+/* @Клиент */
+
+.text-golden {
+	background: radial-gradient(
+			50% 175.52% at 50% 50%,
+			rgba(255, 241, 213, 0.36) 0%,
+			rgba(173, 114, 0, 0.324) 100%
+		),
+		linear-gradient(0deg, #ffd176, #ffd176), #f8fafc;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+/* Rectangle 41 */
+/* Rectangle 41 */
