@@ -212,3 +212,27 @@ button:focus-visible {
 
 /* Rectangle 41 */
 /* Rectangle 41 */
+.custom-checkbox:checked {
+	/* background-color: #e6c275; Золотистый фон */
+	border-color: #e6c275;
+}
+.custom-checkbox {
+	/* Базовые стили для чекбокса */
+	appearance: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	position: relative;
+}
+.custom-checkbox:checked::after {
+	/* Имитация галочки */
+	content: "✔";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.75rem;
+	color: #e6c275; /* Черный цвет галочки на золотистом фоне */
+	line-height: 1;
+}

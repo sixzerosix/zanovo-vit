@@ -11,7 +11,7 @@ function createOverlayIfNeeded() {
 		return;
 	}
 
-	const html = `<div id="${OVERLAY_ID}" class="fixed inset-0 bg-slate-950 opacity-0 pointer-events-none z-[9998]"></div>`;
+	const html = `<div id="${OVERLAY_ID}" class="fixed inset-0 bg-zinc-950 opacity-0 pointer-events-none z-[9998]"></div>`;
 	document.body.insertAdjacentHTML("beforeend", html);
 	overlay = document.getElementById(OVERLAY_ID)!;
 
