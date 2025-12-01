@@ -17,6 +17,7 @@ import "./scripts/motions/overlay.ts"
 import "./scripts/motions/modal.ts"
 import "./scripts/motions/marquee.ts"
 import "./scripts/motions/playvideo.ts"
+import { CookieConsentManager } from './scripts/motions/cookie.ts'
 // import "./scripts/motions/preloader.ts"
 import { initSounds } from './scripts/motions/soundclick.ts'
 import { initAccordion } from './scripts/motions/accordion.ts'
@@ -67,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const title = document.querySelector('.main-title')
 	heroTitle(title)
+	const cookieManager = new CookieConsentManager();
+	cookieManager.init();
 
 	mapMotion()
 	initMotionText()
