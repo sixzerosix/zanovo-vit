@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		// Опционально: Скрываем оверлей, когда видео играет
 		const overlay = video.parentElement.querySelector('.play-overlay');
+		video.playbackRate = 0.9;
 		if (overlay) {
 			video.addEventListener('play', () => overlay.style.opacity = '0');
 			video.addEventListener('pause', () => overlay.style.opacity = '1');

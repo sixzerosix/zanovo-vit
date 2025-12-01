@@ -29,6 +29,9 @@ Alpine.start()
 // Lenis ___
 const lenis = new Lenis({
 	autoRaf: true,
+	// autoResize: true,
+	// duration: 1,
+	// easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
 });
 
 window.lenis = lenis; // for debug

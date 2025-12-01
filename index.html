@@ -13,187 +13,105 @@
 	<header id="header_main" class="h-24 w-full py-6 absolute top-0 left-0 z-50"
 		style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
 		<div class="flex justify-between items-center px-12 h-full">
-			<a href="/" class="inline-flex items-center h-full gap-5">
+			<a href="/" class="inline-flex items-center h-full gap-5 py-2">
 				<img src="/public/egoist-logo.svg" alt="" class="h-full w-auto">
 			</a>
 			<div class="flex gap-10 items-center">
-				<a href="tel:8(913)377-77-75" class="text-2xl ">8 (913) 377-77-75</a>
-				<a href="#" class="text-2xl ">ТГ</a>
-				<div data-sound="click7" id="menuToggle"
-					class="h-12 bg-white flex items-center justify-center px-5 rounded-full cursor-pointer">
-					<svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="24" height="2" rx="1" fill="#020618" />
-						<rect y="6" width="24" height="2" rx="1" fill="#020618" />
+				<a href="tel:8(913)377-77-75" class="text-xl ">8 (913) 377-77-75</a>
+
+				<div data-sound="click7"
+					class="h-12 flex items-center justify-center px-5 rounded-full cursor-pointer border">
+					Связаться
+				</div>
+				<div class="cursor-pointer" id="menuToggle">
+					<svg width="37" height="13" viewBox="0 0 37 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.5 0.5H36.5M0.5 12.5H36.5M0.5 6.5H36.5" stroke="white" stroke-linecap="round" />
 					</svg>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<section class="w-full py-24">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2.4em] pb-[5%]">
-				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="#FFD176" />
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="#FFD176" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="#FFD176" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-					<defs>
-						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-					</defs>
-				</svg>
-				<h2 class="title-xl">Программы <br> и услуги</h2>
-			</div>
+
+
+	<!-- Hero -->
+	<section class="w-full h-screen py-24">
+		<div class="max-w-[1840px] mx-auto px-12 box-content h-full">
 			<div
-				class="grid grid-cols-2 w-full motion-blocks-fadeup [&_>*:nth-child(4n+1)]:items-end [&_>*:nth-child(4n+3)]:items-end [&_>*:nth-child(4n+3)]:justify-end [&_>*:nth-child(4n)]:justify-end">
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+				class="parallax-wrapper video-card relative flex flex-col h-full justify-center items-center gap-[7%] overflow-hidden">
+				<!-- <img src="/public/prog-aqua.webp" alt="" class="absolute z-0 w-full h-auto will-parallax object-cover"
+					data-speed="0.85"> -->
 
+				<video src="/public/prog-aqua.mp4" poster="/public/prog-aqua.webp" muted loop playsinline
+					preload="metadata" class="absolute z-0 w-full h-auto will-parallax object-cover"
+					data-speed="0.85"></video>
+				<div class="flex flex-col items-center gap-[1em] relative">
+					<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="">
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="#FFD176" />
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="#FFD176" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="#FFD176" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
+						<defs>
+							<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+						</defs>
+					</svg>
 
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
-
-					</div>
+					<p class="font-light text-2xl motion-text-fadeup">Премиальный мужской клуб</p>
 				</div>
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
-
-
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
-
-					</div>
+				<h1 class="font-mak uppercase text-8xl motion-text-fadeup text-center max-w-5xl">Ощути Мир полного
+					релакса</h1>
+				<div class="motion-block-fadeup">
+					<button data-modal=".modal-form"
+						style="background: radial-gradient(50% 175.52% at 50% 50%, rgba(255, 241, 213, 0.36) 0%, rgba(173, 114, 0, 0.324) 100%), #FFD176;"
+						class="text-nowrap flex items-center h-24 px-12 text-xl text-slate-950 rounded-full font-semibold cursor-pointer">
+						<span>Забронировать сейчас</span>
+					</button>
 				</div>
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
 
 
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
-
-					</div>
-				</div>
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
-
-
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
-
-					</div>
-				</div>
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
-
-
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
-
-					</div>
-				</div>
-				<div class="aspect-square inline-flex">
-					<div
-						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-[574px] flex items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
-
-
-						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
-							data-curtain-speed="100"></div>
-						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
-							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-						</div>
-						<!-- <img src="/public/prog-aqua.webp" alt=""
-							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85"> -->
-
-						<video src="/public/prog-aqua.mp4" poster="/public/prog-aqua.webp" muted loop playsinline
-							preload="metadata" class="absolute w-auto h-[125%] will-parallax object-cover"
-							data-speed="0.85"></video>
-
-						<div
-							class="play-overlay absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 pointer-events-none">
-							<svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-								<path
-									d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-							</svg>
-						</div>
-
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
 
+
+	<!-- Short about -->
+	<section class="w-full">
+		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+			<div class="h-full flex justify-center items-center py-24 text-center border-b border-zinc-800">
+				<div class="max-w-4xl text-2xl font-light motion-block-fadeup">Мы гарантируем полную конфиденциальность
+					и
+					анонимность. Ваши
+					данные защищены,
+					информация о визитах не
+					разглашается. Профессиональный подход и абсолютное уважение к вашей приватности.</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Persons -->
 	<section class="w-full py-24">
@@ -234,8 +152,7 @@
 				</svg>
 				<h2 class="title-xl">Только лучшиие <br> мастера</h2>
 			</div>
-			<div class="grid grid-cols-3 w-full gap-3 motion-blocks-fadeup">
-
+			<div class="grid md:grid-cols-2 xl:grid-cols-3 w-full gap-3 motion-blocks-fadeup">
 
 				<div class="">
 					<div
@@ -310,23 +227,454 @@
 
 								<span class="text-golden">ТОП</span>
 							</div>
-							<div
-								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
 
-								<span class="text-golden">Сегодня в клубе</span>
-							</div>
 						</div>
 						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
 							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
-							<div>
-								<button id="menuToggle"
-									class="h-14 inline-flex border border-white items-center justify-center px-6 rounded-full cursor-pointer text-lg font-light">
-									Познакомится
-								</button>
-							</div>
+
 						</div>
 						<div
-							class="absolute z-[2] right-[4%] bottom-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							<div>175см</div>
+							<div>65кг</div>
+							<div>Бюст 2.5</div>
+							<div>22 года</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div
+						class="parallax-wrapper py-[5%] px-[6%] relative aspect-3/4 w-full h-full flex items-center justify-center overflow-hidden">
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/model1.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute p-[4%] z-[2] top-0 inset-x-0 w-full flex gap-2">
+							<div
+								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
+								<svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="#FFD176" />
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="url(#paint0_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="#FFD176" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="url(#paint1_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="#FFD176" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="url(#paint2_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="#FFD176" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="url(#paint3_radial_302_91)" fill-opacity="0.36" />
+									<defs>
+										<radialGradient id="paint0_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint1_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint2_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint3_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<span class="text-golden">ТОП</span>
+							</div>
+
+						</div>
+						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
+							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
+
+						</div>
+						<div
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							<div>175см</div>
+							<div>65кг</div>
+							<div>Бюст 2.5</div>
+							<div>22 года</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div
+						class="parallax-wrapper py-[5%] px-[6%] relative aspect-3/4 w-full h-full flex items-center justify-center overflow-hidden">
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/model1.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute p-[4%] z-[2] top-0 inset-x-0 w-full flex gap-2">
+							<div
+								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
+								<svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="#FFD176" />
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="url(#paint0_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="#FFD176" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="url(#paint1_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="#FFD176" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="url(#paint2_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="#FFD176" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="url(#paint3_radial_302_91)" fill-opacity="0.36" />
+									<defs>
+										<radialGradient id="paint0_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint1_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint2_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint3_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<span class="text-golden">ТОП</span>
+							</div>
+
+						</div>
+						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
+							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
+
+						</div>
+						<div
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							<div>175см</div>
+							<div>65кг</div>
+							<div>Бюст 2.5</div>
+							<div>22 года</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div
+						class="parallax-wrapper py-[5%] px-[6%] relative aspect-3/4 w-full h-full flex items-center justify-center overflow-hidden">
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/model1.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute p-[4%] z-[2] top-0 inset-x-0 w-full flex gap-2">
+							<div
+								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
+								<svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="#FFD176" />
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="url(#paint0_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="#FFD176" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="url(#paint1_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="#FFD176" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="url(#paint2_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="#FFD176" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="url(#paint3_radial_302_91)" fill-opacity="0.36" />
+									<defs>
+										<radialGradient id="paint0_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint1_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint2_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint3_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<span class="text-golden">ТОП</span>
+							</div>
+
+						</div>
+						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
+							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
+
+						</div>
+						<div
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							<div>175см</div>
+							<div>65кг</div>
+							<div>Бюст 2.5</div>
+							<div>22 года</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div
+						class="parallax-wrapper py-[5%] px-[6%] relative aspect-3/4 w-full h-full flex items-center justify-center overflow-hidden">
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/model1.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute p-[4%] z-[2] top-0 inset-x-0 w-full flex gap-2">
+							<div
+								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
+								<svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="#FFD176" />
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="url(#paint0_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="#FFD176" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="url(#paint1_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="#FFD176" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="url(#paint2_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="#FFD176" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="url(#paint3_radial_302_91)" fill-opacity="0.36" />
+									<defs>
+										<radialGradient id="paint0_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint1_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint2_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint3_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<span class="text-golden">ТОП</span>
+							</div>
+
+						</div>
+						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
+							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
+
+						</div>
+						<div
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
+							<div>175см</div>
+							<div>65кг</div>
+							<div>Бюст 2.5</div>
+							<div>22 года</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div
+						class="parallax-wrapper py-[5%] px-[6%] relative aspect-3/4 w-full h-full flex items-center justify-center overflow-hidden">
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/model1.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute p-[4%] z-[2] top-0 inset-x-0 w-full flex gap-2">
+							<div
+								class="flex flex-nowrap gap-3 items-start px-5 py-3 rounded-full text-lg font-light leading-[1] bg-zinc-950/65">
+								<svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="#FFD176" />
+									<path
+										d="M15.3044 18H6.60871C6.60871 18 5.7503 15.7235 5.04349 14.336C3.50359 11.3133 0 7.24351 0 7.24351L7.30437 11.4L10.9565 0L14.6956 11.4004L22 7.24351C22 7.24351 18.4823 11.3171 16.9131 14.336C16.1918 15.7236 15.3044 18 15.3044 18Z"
+										fill="url(#paint0_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="#FFD176" />
+									<path
+										d="M14.6964 11.3997L14.6956 11.4004L13.7869 8.63116L13.7877 8.63043L14.6964 11.3997Z"
+										fill="url(#paint1_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="#FFD176" />
+									<path
+										d="M17.2183 8.9754L15.1935 10.1282L14.5069 8.03644L17.3921 5.65679L17.2183 8.9754Z"
+										fill="url(#paint2_radial_302_91)" fill-opacity="0.36" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="#FFD176" />
+									<path
+										d="M7.45696 8.07818L6.80234 10.1238L4.67279 8.91168L4.5227 5.65679L7.45696 8.07818Z"
+										fill="url(#paint3_radial_302_91)" fill-opacity="0.36" />
+									<defs>
+										<radialGradient id="paint0_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint1_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint2_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+										<radialGradient id="paint3_radial_302_91" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(10.9575 8.52855) scale(6.43463 10.0814)">
+											<stop stop-color="#FFF1D5" />
+											<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<span class="text-golden">ТОП</span>
+							</div>
+
+						</div>
+						<div class="absolute p-[5%] z-[2] bottom-0 inset-x-0 w-full flex flex-col gap-2">
+							<h3 class="text-[calc(1.5vh+1.5vw+4%+0.75rem)] font-mak leading-[1]">Яна</h3>
+
+						</div>
+						<div
+							class="absolute z-[2] right-[4%] top-[4%] text-right text-lg font-light leading-[1] space-y-1.5">
 							<div>175см</div>
 							<div>65кг</div>
 							<div>Бюст 2.5</div>
@@ -335,75 +683,283 @@
 					</div>
 				</div>
 
-
-
-
 			</div>
 		</div>
 	</section>
 
-	<!-- Hero -->
-	<section class="w-full h-screen py-24">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="flex flex-col h-full justify-center items-center gap-[7%]">
-				<div class="flex flex-col items-center gap-[1em]">
-					<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-							fill="#FFD176" />
-						<path
-							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-							fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-							fill="#FFD176" />
-						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-							fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-							fill="#FFD176" />
-						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-							fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-						<defs>
-							<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-								<stop stop-color="#FFF1D5" />
-								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-							</radialGradient>
-							<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-								<stop stop-color="#FFF1D5" />
-								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-							</radialGradient>
-							<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-								<stop stop-color="#FFF1D5" />
-								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-							</radialGradient>
-						</defs>
-					</svg>
 
-					<p class="font-light text-2xl motion-text-fadeup">Премиальный мужской клуб</p>
+	<!-- Services -->
+	<section class="w-full py-24">
+		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+			<div class="section-header flex flex-col items-center gap-[2.4em] pb-[5%]">
+				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+						fill="#FFD176" />
+					<path
+						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
+					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+						fill="#FFD176" />
+					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
+					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+						fill="#FFD176" />
+					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
+					<defs>
+						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+							<stop stop-color="#FFF1D5" />
+							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+						</radialGradient>
+						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+							<stop stop-color="#FFF1D5" />
+							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+						</radialGradient>
+						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+							<stop stop-color="#FFF1D5" />
+							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+						</radialGradient>
+					</defs>
+				</svg>
+				<h2 class="title-xl">Программы <br> и услуги</h2>
+			</div>
+			<div
+				class="grid sm:grid-cols-2 w-full motion-blocks-fadeup [&_>*:nth-child(4n+1)]:items-end [&_>*:nth-child(4n+3)]:items-end [&_>*:nth-child(4n+3)]:justify-end [&_>*:nth-child(4n)]:justify-end">
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-aqua.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Аква</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Аквапенный боди массаж, одна
+								эротическая часть, релаксирующий массаж одной части тела на выбор.</p>
+						</div>
+
+					</div>
 				</div>
-				<h1 class="font-mak uppercase text-8xl motion-text-fadeup text-center max-w-5xl">Ощути Мир полного
-					релакса</h1>
-				<div class="motion-block-fadeup">
-					<button data-modal=".modal-form"
-						style="background: radial-gradient(50% 175.52% at 50% 50%, rgba(255, 241, 213, 0.36) 0%, rgba(173, 114, 0, 0.324) 100%), #FFD176;"
-						class="text-nowrap flex items-center h-24 px-12 text-xl text-slate-950 rounded-full font-semibold cursor-pointer">
-						<span>Забронировать сейчас</span>
-					</button>
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-classic.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Классика</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">
+								Боди массаж, массаж лингама, одна эротическая часть,релаксирующий массаж двух частей
+								тела на выбор
+							</p>
+						</div>
+
+					</div>
 				</div>
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-flat-relax.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Полный релакс</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Боди массаж, две эротические части,
+								массаж всего тела</p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[30%] absolute bottom-0 inset-x-0 z-[1] opacity-60"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-triple.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Третий не лишний
+							</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Чувственная и захватывающая
+								программа для вас и вашей избранницы, наполненная страстью и эротикой</p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-100"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-ego-lady.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover z-0" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Леди эгоист</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Все условия программы доминации,
+								оговариваются с гостем. Будет жарко</p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-ego-max.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Эгоистъ макс</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Неограниченное количество эротики и
+								релакса</p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-aqua.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Сладкая парочка</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Шоу с двумя избранницами. Воплотим
+								все Ваши тайные фантазии</p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="aspect-square inline-flex">
+					<div
+						class="parallax-wrapper video-card relative aspect-square w-full max-w-[574px] h-full max-h-max flex flex-col items-center justify-center bg-zinc-900 motion-block-fadeup overflow-hidden">
+
+
+						<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-[3] w-full self-start"
+							data-curtain-speed="100"></div>
+						<div class="h-[25%] absolute top-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<div class="h-[25%] absolute bottom-0 inset-x-0 z-[1] opacity-50"
+							style="background: linear-gradient(180deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
+						</div>
+						<img src="/public/prog-love-time.webp" alt=""
+							class="absolute w-auto h-[125%] will-parallax object-cover" data-speed="0.85">
+
+						<div class="absolute inset-0 p-[8%] flex flex-col justify-between">
+							<h3 class="text-5xl font-mak text-center relative z-[2] leading-[1.2]">Лав-тайм</h3>
+
+							<p class="font-light text-xl text-center relative z-[2]">Максимум нежности и эротики в
+								программе</p>
+						</div>
+
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</section>
 
 
 	<!-- Wantages -->
-	<section class="w-full h-screen py-24">
+	<section class="w-full h-screen py-24 overflow-hidden">
 		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
 			<div class="relative h-full flex flex-col items-center justify-center">
 				<div class="absolute">
 					<div class="motion-block-fadeup">
-						<div class="marquee-container overflow-hidden whitespace-nowrap py-4 flex" data-speed="20"
+						<div class="marquee-container whitespace-nowrap overflow-hidden py-4 flex" data-speed="20"
 							data-direction="left">
 							<h2
 								class="title-xl marquee-content flex gap-8 pr-8 text-4xl font-bold uppercase items-center">
@@ -606,48 +1162,6 @@
 	</section>
 
 
-	<section class="w-full h-screen py-24">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2.4em]">
-				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="#FFD176" />
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="#FFD176" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="#FFD176" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-					<defs>
-						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-					</defs>
-				</svg>
-				<h2 class="title-xl"></h2>
-			</div>
-		</div>
-	</section>
-
-
 	<!-- Interrior -->
 	<section class="w-full py-24 space-y-[5%]">
 		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
@@ -687,7 +1201,7 @@
 				</svg>
 				<h2 class="title-xl motion-text-fadeup">Премиаьный <br> интерьер</h2>
 			</div>
-			<div class="flex flex-nowrap w-full gap-3 motion-blocks-fadeup">
+			<div class="flex flex-nowrap w-full gap-3 motion-blocks-fadeup overflow-hidden">
 				<div
 					class="parallax-wrapper relative flex items-center justify-center aspect-square min-w-1/3 overflow-hidden">
 					<div class="curtain-panel absolute h-[60%] top-0 bg-zinc-950 z-30 w-full self-start"
@@ -758,7 +1272,7 @@
 	</section>
 
 	<!-- Private -->
-	<section class="w-full h-screen py-24">
+	<section class="w-full py-24">
 		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
 			<div class="section-header flex flex-col items-center gap-[2.4em]">
 				<img src="/public/black-mask.png" alt="" class="w-[35%] motion-block-fadeup">
@@ -777,6 +1291,52 @@
 		</div>
 	</section>
 
+
+	<footer class="w-full py-24 space-y-[5%]">
+		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+			<div class="grid grid-cols-2 gap-5">
+				<div>
+					<div>Работаем круглосуточно</div>
+					<div>
+						<div>Новосибирск, просп. Дзержинского, 1/1</div>
+						<div>
+							<a href="tel:000">8 (999) 666 7766</a>
+							<a href="tel:000">8 (999) 666 7766</a>
+						</div>
+						<div>
+							<a href="#">Телеграм</a>
+							<span>·</span>
+							<a href="#">Вотсап</a>
+						</div>
+					</div>
+					<div>
+						В нашем клубе не оказывают интимных услуг!
+					</div>
+				</div>
+				<div>
+					<map name="">
+						<img src="/public/egoist-map.png" alt="">
+					</map>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="w-full">
+		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+			<div
+				class="flex items-center justify-between py-[calc(0.75rem+1%)] gap-5 border-t border-zinc-800 font-light text-lg text-zinc-300">
+				<div>
+					© Эгоист клуб, слабости сильных 2025
+				</div>
+				<div>
+					<div class="flex items-center gap-5 underline">
+						<a href="#">Информация</a>
+						<a href="#">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<!-- Боковое меню -->
