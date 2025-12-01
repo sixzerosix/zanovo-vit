@@ -18,6 +18,7 @@ import "./scripts/motions/modal.ts"
 import "./scripts/motions/marquee.ts"
 import "./scripts/motions/playvideo.ts"
 import { CookieConsentManager } from './scripts/motions/cookie.ts'
+import { AgeVerificationManager } from './scripts/motions/ageverification.ts'
 // import "./scripts/motions/preloader.ts"
 import { initSounds } from './scripts/motions/soundclick.ts'
 import { initAccordion } from './scripts/motions/accordion.ts'
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	heroTitle(title)
 	const cookieManager = new CookieConsentManager();
 	cookieManager.init();
+	const ageGate = new AgeVerificationManager();
+	ageGate.init();
 
 	mapMotion()
 	initMotionText()
