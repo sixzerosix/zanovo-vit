@@ -107,7 +107,7 @@ export class CookieConsentManager {
 					Это помогает нам делать сайт лучше. Оставаясь здесь, вы соглашаетесь с нашей политикой.
 				</p>
 				<button id="cookie-accept-btn" data-sound="click7"
-					class="inline-flex items-center justify-center px-[2em] py-[1em] rounded-full cursor-pointer border border-zinc-800 hover:border-zinc-100 transition-all">
+					class="inline-flex items-center justify-center px-[2em] py-[1em] rounded-full cursor-pointer border border-zinc-800 hover:bg-zinc-800 duration-500 transition-all">
 					Окей
 				</button>
 

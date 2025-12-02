@@ -4,6 +4,68 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 
+gsap.to("#wnatages", {
+	y: "-100%",
+	duration: 3,
+	ease: "none",
+	scrollTrigger: {
+		trigger: "#wnatages_section",
+		start: "top top",
+		pin: true,
+		scrub: true,
+		end: "+=300%",
+	},
+});
+
+const wnatagesCards = document.querySelectorAll(`#wnatages > div`);
+
+wnatagesCards.forEach((triggerEl) => {
+
+
+	// Начальные стили
+	// gsap.set(triggerEl, { opacity: 0 });
+
+
+	// gsap.fromTo(
+	// 	triggerEl,
+	// 	{ y: 80, opacity: 0 },
+	// 	{
+	// 		y: 0,
+	// 		opacity: 1,
+	// 		duration: 1,
+	// 		ease: "power3.out",
+	// 		scrollTrigger: {
+	// 			trigger: triggerEl,
+	// 			start: "50% top",
+	// 			end: "20%",
+	// 			scrub: true,
+	// 		}
+	// 	}
+	// )
+
+
+
+	// 3. Создаём ScrollTrigger
+	// ScrollTrigger.create({
+	// 	trigger: triggerEl,
+	// 	start: "top 80%",
+	// 	scrub: true,
+	// 	onEnter: () => {
+	// 		gsap.fromTo(
+	// 			triggerEl,
+	// 			{ y: 80, opacity: 0 },
+	// 			{
+	// 				y: 0,
+	// 				opacity: 1,
+	// 				duration: 1,
+	// 				ease: "power3.out",
+	// 			}
+	// 		)
+	// 	}
+	// });
+});
+
+
 
 gsap.to('.box', {
 	scrollTrigger: '.box', // start animation when ".box" enters the viewport

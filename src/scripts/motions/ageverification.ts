@@ -67,13 +67,13 @@ export class AgeVerificationManager {
 
 		// HTML шаблон (твой код + правки под button)
 		this.container.innerHTML = `
-      <div class="p-12 max-w-xl w-full relative transform transition-transform duration-500 scale-95" id="age-gate-content">
-          <h2 id="age-gate-title" class="text-4xl mb-[1em] font-serif text-center text-white">Вам уже есть 18?</h2>
+      <div class="p-12 max-w-lg w-full relative transform transition-transform duration-500 scale-95" id="age-gate-content">
+          <h2 id="age-gate-title" class="text-4xl mb-[1em] font-mak text-center text-white">Вам уже есть 18?</h2>
           
           <div class="flex flex-col sm:flex-row justify-center gap-5 font-medium text-white">
               <!-- Button NO -->
               <button id="age-btn-no" data-sound="click7"
-                  class="flex-1 flex items-center justify-center px-[2em] py-[1em] rounded-full cursor-pointer border border-zinc-700 hover:bg-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-500">
+                  class="flex-1 flex items-center justify-center px-[2em] py-[1em] rounded-full cursor-pointer border border-zinc-800 hover:bg-zinc-800 duration-500 transition-all focus:outline-none focus:ring-2 focus:ring-zinc-500">
                   Нет
               </button>
               
