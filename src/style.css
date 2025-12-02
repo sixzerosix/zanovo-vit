@@ -72,7 +72,7 @@
 	font-family: var(--font-verano-sans) !important;
 	line-height: 1.5;
 	font-weight: 400;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.025em;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
@@ -189,9 +189,6 @@ button:focus-visible {
 /* Frame 8 */
 
 /* Auto layout */
-.title-xl {
-	@apply text-8xl text-center font-mak leading-[1.1];
-}
 
 /* .section-header {
 } */
@@ -235,4 +232,83 @@ button:focus-visible {
 	font-size: 0.75rem;
 	color: #e6c275; /* Черный цвет галочки на золотистом фоне */
 	line-height: 1;
+}
+
+/* Text */
+.title-32-96 {
+	font-size: clamp(2rem, 0.9714rem + 4.5714vw, 6rem);
+	@apply text-center font-mak leading-[1.2] md:leading-[1.1];
+}
+
+.title-36-96 {
+	font-size: clamp(2.25rem, 1.2857rem + 4.2857vw, 6rem);
+	@apply text-center font-mak leading-[1.2] md:leading-[1.1];
+}
+
+.text-14-28 {
+	font-size: clamp(0.875rem, 0.65rem + 1vw, 1.75rem);
+}
+.text-14-24 {
+	font-size: clamp(0.875rem, 0.7143rem + 0.7143vw, 1.5rem);
+}
+.text-16-24 {
+	font-size: clamp(1rem, 0.8714rem + 0.5714vw, 1.5rem);
+}
+
+.text-16-20 {
+	font-size: clamp(1rem, 0.9357rem + 0.2857vw, 1.25rem);
+}
+.text-14-20 {
+	font-size: clamp(0.875rem, 0.7786rem + 0.4286vw, 1.25rem);
+}
+
+/* height */
+.h-64-96 {
+	height: clamp(4rem, 3.4857rem + 2.2857vw, 6rem);
+}
+
+/* Padding */
+.p-20-48 {
+	padding: ;
+}
+
+.px-20-48 {
+	padding-left: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+	padding-right: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+}
+
+.px-32-48 {
+	padding-left: clamp(2rem, 1.7429rem + 1.1429vw, 3rem);
+	padding-right: clamp(2rem, 1.7429rem + 1.1429vw, 3rem);
+}
+
+.py-20-48 {
+	padding: ;
+}
+.py-48-96 {
+	padding-top: clamp(3rem, 2.2286rem + 3.4286vw, 6rem);
+	padding-bottom: clamp(3rem, 2.2286rem + 3.4286vw, 6rem);
+}
+.py-56-128 {
+	padding-top: clamp(3.5rem, 2.3429rem + 5.1429vw, 8rem);
+	padding-bottom: clamp(3.5rem, 2.3429rem + 5.1429vw, 8rem);
+}
+
+.pb-56-96 {
+	padding-bottom: clamp(3.5rem, 2.8571rem + 2.8571vw, 6rem);
+}
+
+/* Gap */
+.gap-24-48 {
+	gap: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+}
+
+.gap-20-40 {
+	gap: clamp(1.5rem, 1.2429rem + 1.1429vw, 2.5rem);
+}
+
+/* Size */
+.size-40-62 {
+	width: clamp(2.25rem, 1.8321rem + 1.8571vw, 3.875rem);
+	height: clamp(2.25rem, 1.8321rem + 1.8571vw, 3.875rem);
 }

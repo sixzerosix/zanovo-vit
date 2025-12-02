@@ -9,19 +9,42 @@
 </head>
 
 
-<body class="overflow-hidden bg-zinc-950 text-zinc-200">
-	<header id="header_main" class="h-24 w-full py-6 absolute top-0 left-0 z-50"
+<body class="overflow-hidden bg-zinc-950 text-zinc-200 relative">
+	<header id="header_main" class="h-64-96 w-full py-3  md:py-6 absolute top-0 left-0 z-50"
 		style="background: linear-gradient(360deg, rgba(9, 9, 11, 0) 0%, #09090B 100%);">
-		<div class="flex justify-between items-center px-12 h-full">
-			<a href="/" class="inline-flex items-center h-full gap-5 py-2">
-				<img src="/public/egoist-logo.svg" alt="" class="h-full w-auto">
+		<div class="flex justify-between items-center px-20-48 h-full">
+			<a href="/" class="inline-flex items-center h-full gap-5">
+				<img src="/public/egoist-logo.svg" alt="" class="h-full max-h-[1.7em] w-auto max-sm:hidden">
+				<img src="/public/egoist-symbol.svg" alt="" class="h-full max-h-[1.5em] w-auto sm:hidden">
 			</a>
-			<div class="flex gap-10 items-center">
-				<a href="tel:8(913)377-77-75" class="text-xl ">8 (913) 377-77-75</a>
+			<div class="flex gap-20-40 items-center font-light">
+				<a href="tel:8(913)377-77-75" class="text-16-20">8 (913) 377-77-75</a>
 
 				<div data-sound="click7"
-					class="h-12 flex items-center justify-center px-5 rounded-full cursor-pointer border border-zinc-100/15">
-					Связаться
+					class="h-12 flex max-lg:hidden items-center justify-center px-5 rounded-full cursor-pointer border border-zinc-100/15">
+					<span class="max-lg:hidden">Связаться</span>
+					<span class="hidden">
+						<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12 0C18.6274 0 24 4.10764 24 9.17468C24 14.2417 18.6274 18.3494 12 18.3494C10.8088 18.3494 9.65809 18.2169 8.57188 17.9698C8.32451 17.9135 8.08102 17.8471 7.84063 17.7792L2.57344 22L4.74062 16.476C4.62286 16.4074 4.50492 16.3408 4.39062 16.2691C1.71013 14.5865 0 12.0333 0 9.17468C1.40565e-07 4.10764 5.37258 1.18221e-07 12 0ZM8.8 10.0087C8.35817 10.0087 8 10.3822 8 10.8428C8 11.3034 8.35817 11.6769 8.8 11.6769H18.4C18.8418 11.6769 19.2 11.3034 19.2 10.8428C19.2 10.3822 18.8418 10.0087 18.4 10.0087H8.8ZM5.6 6.67249C5.15817 6.67249 4.8 7.04591 4.8 7.50655C4.8 7.96719 5.15817 8.34061 5.6 8.34061H15.2C15.6418 8.34061 16 7.96719 16 7.50655C16 7.04591 15.6418 6.67249 15.2 6.67249H5.6Z"
+								fill="#D9D9D9" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12 0C18.6274 0 24 4.10764 24 9.17468C24 14.2417 18.6274 18.3494 12 18.3494C10.8088 18.3494 9.65809 18.2169 8.57188 17.9698C8.32451 17.9135 8.08102 17.8471 7.84063 17.7792L2.57344 22L4.74062 16.476C4.62286 16.4074 4.50492 16.3408 4.39062 16.2691C1.71013 14.5865 0 12.0333 0 9.17468C1.40565e-07 4.10764 5.37258 1.18221e-07 12 0ZM8.8 10.0087C8.35817 10.0087 8 10.3822 8 10.8428C8 11.3034 8.35817 11.6769 8.8 11.6769H18.4C18.8418 11.6769 19.2 11.3034 19.2 10.8428C19.2 10.3822 18.8418 10.0087 18.4 10.0087H8.8ZM5.6 6.67249C5.15817 6.67249 4.8 7.04591 4.8 7.50655C4.8 7.96719 5.15817 8.34061 5.6 8.34061H15.2C15.6418 8.34061 16 7.96719 16 7.50655C16 7.04591 15.6418 6.67249 15.2 6.67249H5.6Z"
+								fill="#FFD176" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12 0C18.6274 0 24 4.10764 24 9.17468C24 14.2417 18.6274 18.3494 12 18.3494C10.8088 18.3494 9.65809 18.2169 8.57188 17.9698C8.32451 17.9135 8.08102 17.8471 7.84063 17.7792L2.57344 22L4.74062 16.476C4.62286 16.4074 4.50492 16.3408 4.39062 16.2691C1.71013 14.5865 0 12.0333 0 9.17468C1.40565e-07 4.10764 5.37258 1.18221e-07 12 0ZM8.8 10.0087C8.35817 10.0087 8 10.3822 8 10.8428C8 11.3034 8.35817 11.6769 8.8 11.6769H18.4C18.8418 11.6769 19.2 11.3034 19.2 10.8428C19.2 10.3822 18.8418 10.0087 18.4 10.0087H8.8ZM5.6 6.67249C5.15817 6.67249 4.8 7.04591 4.8 7.50655C4.8 7.96719 5.15817 8.34061 5.6 8.34061H15.2C15.6418 8.34061 16 7.96719 16 7.50655C16 7.04591 15.6418 6.67249 15.2 6.67249H5.6Z"
+								fill="url(#paint0_radial_397_29)" fill-opacity="0.36" />
+							<defs>
+								<radialGradient id="paint0_radial_397_29" cx="0" cy="0" r="1"
+									gradientUnits="userSpaceOnUse"
+									gradientTransform="translate(11.9526 7.00912) scale(7.01968 24.3076)">
+									<stop stop-color="#FFF1D5" />
+									<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+								</radialGradient>
+							</defs>
+						</svg>
+					</span>
+
 				</div>
 				<div class="cursor-pointer" id="menuToggle">
 					<svg width="37" height="13" viewBox="0 0 37 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,21 +55,90 @@
 		</div>
 	</header>
 
-
-
 	<!-- Hero -->
-	<section class="w-full h-[95vh] pt-24">
-		<div class="max-w-[1840px] mx-auto px-12 box-content h-full">
+	<section class="w-full portrait:max-md:h-[95vh] max-md:aspect-auto max-lg:aspect-square lg:h-[95vh] pt-24">
+		<div class="max-w-[1840px] mx-auto px-20-48 box-content h-full">
 			<div
-				class="parallax-wrapper relative flex flex-col h-full justify-center items-center gap-[7%] overflow-hidden video-card">
-				<!-- <img src="/public/prog-aqua.webp" alt="" class="absolute z-0 w-full h-auto will-parallax object-cover"
-					data-speed="0.85"> -->
-
+				class="parallax-wrapper relative flex flex-col h-full justify-center items-center gap-24-48 overflow-hidden video-card">
 				<video src="/public/prog-aqua.mp4" poster="/public/prog-aqua.webp" muted loop playsinline
-					preload="metadata" class="absolute z-0 w-full h-auto will-parallax object-cover"
+					preload="metadata"
+					class="absolute z-0 w-full portrait:max-sm:h-[115vh] h-auto will-parallax object-cover"
 					data-speed="0.85"></video>
-				<div class="flex flex-col items-center gap-[1em] relative">
-					<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+				<div class="flex flex-col items-center gap-[calc(0.4vw+1rem+0.7%)] relative">
+					<span class="size-[3em] size-40-62 motion-block-fadeup">
+						<svg width="100%" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+							class="">
+							<path
+								d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+								fill="#FFD176" />
+							<path
+								d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+								fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
+							<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+								fill="#FFD176" />
+							<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+								fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
+							<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+								fill="#FFD176" />
+							<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+								fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
+							<defs>
+								<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1"
+									gradientUnits="userSpaceOnUse"
+									gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+									<stop stop-color="#FFF1D5" />
+									<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+								</radialGradient>
+								<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1"
+									gradientUnits="userSpaceOnUse"
+									gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+									<stop stop-color="#FFF1D5" />
+									<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+								</radialGradient>
+								<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1"
+									gradientUnits="userSpaceOnUse"
+									gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+									<stop stop-color="#FFF1D5" />
+									<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+								</radialGradient>
+							</defs>
+						</svg>
+					</span>
+					<p class="font-light text-14-24 motion-text-fadeup capitalize">Премиальный мужской клуб</p>
+				</div>
+				<h1 class="title-36-96 font-mak capitalize motion-text-fadeup text-center max-w-5xl">Ощути Мир <br>
+					полного
+					релакса</h1>
+				<div class="motion-block-fadeup">
+					<button data-sound="calm" data-modal=".modal-form"
+						style="background: radial-gradient(50% 175.52% at 50% 50%, rgba(255, 241, 213, 0.36) 0%, rgba(173, 114, 0, 0.324) 100%), #FFD176;"
+						class="h-64-96 text-nowrap flex items-center h-24 px-32-48 text-14-20 text-slate-950 rounded-full font-semibold cursor-pointer">
+						<span>Забронировать сейчас</span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Short about -->
+	<section class="w-full">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="h-full flex justify-center items-center py-56-128 text-center border-b border-zinc-800">
+				<div class="max-lg:max-w-xl max-w-4xl text-16-24 font-light motion-block-fadeup">
+					Мы гарантируем полную конфиденциальность и анонимность. Ваши
+					данные защищены, информация о визитах не разглашается.
+					Профессиональный подход и абсолютное уважение к вашей приватности.</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Persons -->
+	<section class="w-full py-48-96">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="section-header flex flex-col items-center gap-[2.4em] pb-56-96">
+				<span class="size-[3em] size-40-62 motion-block-fadeup">
+					<svg width="100%" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
 						class="">
 						<path
 							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
@@ -80,74 +172,8 @@
 							</radialGradient>
 						</defs>
 					</svg>
-
-					<p class="font-light text-2xl motion-text-fadeup">Премиальный мужской клуб</p>
-				</div>
-				<h1 class="font-mak uppercase text-8xl motion-text-fadeup text-center max-w-5xl">Ощути Мир полного
-					релакса</h1>
-				<div class="motion-block-fadeup">
-					<button data-sound="calm" data-modal=".modal-form"
-						style="background: radial-gradient(50% 175.52% at 50% 50%, rgba(255, 241, 213, 0.36) 0%, rgba(173, 114, 0, 0.324) 100%), #FFD176;"
-						class="text-nowrap flex items-center h-24 px-12 text-xl text-slate-950 rounded-full font-semibold cursor-pointer">
-						<span>Забронировать сейчас</span>
-					</button>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Short about -->
-	<section class="w-full">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="h-full flex justify-center items-center py-32 text-center border-b border-zinc-800">
-				<div class="max-w-4xl text-2xl font-light motion-block-fadeup">
-					Мы гарантируем полную конфиденциальность и анонимность. Ваши
-					данные защищены, информация о визитах не разглашается.
-					Профессиональный подход и абсолютное уважение к вашей приватности.</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Persons -->
-	<section class="w-full py-24">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2.4em] pb-[5%]">
-				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="#FFD176" />
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="#FFD176" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="#FFD176" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-					<defs>
-						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-					</defs>
-				</svg>
-				<h2 class="title-xl">Только лучшиие <br> мастера</h2>
+				</span>
+				<h2 class="title-32-96">Только лучшиие <br> мастера</h2>
 			</div>
 			<div class="grid md:grid-cols-2 xl:grid-cols-3 w-full gap-3 motion-blocks-fadeup">
 
@@ -684,45 +710,47 @@
 		</div>
 	</section>
 
-
 	<!-- Services -->
-	<section class="w-full py-24">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2.4em] pb-[5%]">
-				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="#FFD176" />
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="#FFD176" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="#FFD176" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-					<defs>
-						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-					</defs>
-				</svg>
-				<h2 class="title-xl">Программы <br> и услуги</h2>
+	<section class="w-full py-48-96">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="section-header flex flex-col items-center gap-[2.4em] pb-56-96">
+				<span class="size-[3em] size-40-62 motion-block-fadeup">
+					<svg width="100%" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="">
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="#FFD176" />
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="#FFD176" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="#FFD176" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
+						<defs>
+							<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+						</defs>
+					</svg>
+				</span>
+				<h2 class="title-32-96">Программы <br> и услуги</h2>
 			</div>
 			<div
 				class="grid sm:grid-cols-2 w-full motion-blocks-fadeup [&_>*:nth-child(4n+1)]:items-end [&_>*:nth-child(4n+3)]:items-end [&_>*:nth-child(4n+3)]:justify-end [&_>*:nth-child(4n)]:justify-end">
@@ -949,14 +977,13 @@
 		</div>
 	</section>
 
-
 	<!-- Wantages -->
-	<section id="wnatages_section" class="w-full py-24 overflow-hidden relative h-screen">
+	<section id="wnatages_section" class="w-full py-48-96 overflow-hidden relative h-screen">
 		<div id="marquee_section" class="absolute h-screen inset-0 flex items-center">
 			<div class="motion-block-fadeup sticky top-0">
 				<div class="marquee-container whitespace-nowrap overflow-hidden py-4 flex" data-speed="20"
 					data-direction="left">
-					<h2 class="title-xl marquee-content flex gap-8 pr-8 text-4xl font-bold uppercase items-center">
+					<h2 class="title-32-96 marquee-content flex gap-8 pr-8 text-4xl font-bold uppercase items-center">
 						<span>Изыскано</span>
 						<span class="pb-[0.25em]">
 							<svg width="29" height="24" viewBox="0 0 29 24" fill="none"
@@ -1129,7 +1156,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
 
 			<div id="wnatages" class="w-full grid gap-10 justify-center z-10">
 
@@ -1209,45 +1236,47 @@
 		</div>
 	</section>
 
-
 	<!-- Interrior -->
-	<section class="w-full py-24 space-y-[5%]">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2.4em] pb-[5%]">
-				<svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="#FFD176" />
-					<path
-						d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
-						fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="#FFD176" />
-					<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
-						fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="#FFD176" />
-					<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
-						fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
-					<defs>
-						<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-						<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
-							<stop stop-color="#FFF1D5" />
-							<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
-						</radialGradient>
-					</defs>
-				</svg>
-				<h2 class="title-xl motion-text-fadeup">Премиаьный <br> интерьер</h2>
+	<section class="w-full py-48-96 space-y-[5%]">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="section-header flex flex-col items-center gap-[2.4em] pb-56-96">
+				<span class="size-[3em] size-40-62 motion-block-fadeup">
+					<svg width="100%" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="">
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="#FFD176" />
+						<path
+							d="M43.1308 51.4628H18.6246C18.6246 51.4628 16.2055 44.9541 14.2135 40.9874C9.87379 32.3452 0 20.7095 0 20.7095L20.5851 32.5931L30.8777 0L41.4152 32.5944L62.0003 20.7095C62.0003 20.7095 52.0866 32.3562 47.6643 40.9874C45.6317 44.9545 43.1308 51.4628 43.1308 51.4628Z"
+							fill="url(#paint0_radial_272_22)" fill-opacity="0.36" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="#FFD176" />
+						<path d="M48.5234 25.6594L42.8135 28.9563L40.8809 22.9787L49.0117 16.1731L48.5234 25.6594Z"
+							fill="url(#paint1_radial_272_22)" fill-opacity="0.36" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="#FFD176" />
+						<path d="M21.0127 23.0949L19.166 28.9446L13.166 25.4807L12.7432 16.1731L21.0127 23.0949Z"
+							fill="url(#paint2_radial_272_22)" fill-opacity="0.36" />
+						<defs>
+							<radialGradient id="paint0_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint1_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+							<radialGradient id="paint2_radial_272_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+								gradientTransform="translate(30.8774 22.5647) scale(18.1343 22.4372)">
+								<stop stop-color="#FFF1D5" />
+								<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+							</radialGradient>
+						</defs>
+					</svg>
+				</span>
+				<h2 class="title-32-96 motion-text-fadeup">Премиаьный <br> интерьер</h2>
 			</div>
 			<div class="flex flex-nowrap w-full gap-3 motion-blocks-fadeup overflow-hidden">
 				<div
@@ -1321,10 +1350,10 @@
 
 	<!-- Private -->
 	<section class="w-full">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="section-header flex flex-col items-center gap-[2em] py-24 border-y border-zinc-800">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="section-header flex flex-col items-center gap-[2em] py-48-96 border-y border-zinc-800">
 				<img src="/public/black-mask.png" alt="" class="w-[35%] motion-block-fadeup">
-				<h2 class="title-xl max-w-5xl motion-text-fadeup">Ваше удовольствие — тольkо для вас</h2>
+				<h2 class="title-32-96 max-w-5xl motion-text-fadeup">Ваше удовольствие — тольkо для вас</h2>
 				<p class="max-w-xl text-3xl text-center font-light motion-block-fadeup mb-[1em]">
 					Мы ценим вашу приватность! Никто кроме вас не узнает о псещении клуба
 				</p>
@@ -1339,12 +1368,11 @@
 		</div>
 	</section>
 
-
 	<!-- Footer -->
-	<footer class="w-full py-24 space-y-[5%]">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
-			<div class="grid grid-cols-2 gap-5">
-				<div class="flex flex-col gap-12">
+	<footer class="w-full py-48-96 space-y-[5%]">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
+			<div class="grid lg:grid-cols-2 gap-5">
+				<div class="flex flex-col gap-12 motion-blocks-fadeup">
 					<div class="text-5xl font-mak">Работаем круглосуточно</div>
 					<div class="flex flex-col gap-5">
 						<div class="flex items-center gap-1.5 text-3xl font-light">Новосибирск, просп. Дзержинского, 1/1
@@ -1363,7 +1391,7 @@
 						В нашем клубе не оказывают интимных услуг!
 					</div>
 				</div>
-				<div>
+				<div class="motion-block-fadeup">
 					<map name="">
 						<img src="/public/egoist-map.png" alt="">
 					</map>
@@ -1372,25 +1400,22 @@
 		</div>
 	</footer>
 
-
 	<!-- Нижний бар -->
 	<div class="w-full">
-		<div class="max-w-[1760px] mx-auto px-12 box-content h-full">
+		<div class="max-w-[1760px] mx-auto px-20-48 box-content h-full">
 			<div
-				class="flex items-center justify-between py-[calc(0.75rem+1%)] gap-5 border-t border-zinc-800 font-light text-lg text-zinc-300">
+				class="flex max-md:flex-col items-center justify-between py-[calc(0.75rem+1%)] gap-5 border-t border-zinc-800 font-light text-lg text-zinc-300">
 				<div>
 					© Эгоист клуб, слабости сильных 2025
 				</div>
 				<div>
 					<div class="flex items-center gap-5 underline">
-						<a href="#">Информация</a>
 						<a href="#">Политика конфиденциальности</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Боковое меню -->
 	<nav id="mobileMenu"
@@ -1421,7 +1446,6 @@
 			</ul>
 		</div>
 	</nav>
-
 
 	<!-- Любая модалка -->
 	<div class="modal-form fixed inset-0  items-center justify-center z-[9999] hidden">
@@ -1494,7 +1518,6 @@
 		</div>
 	</div>
 
-
 	<!-- PRELOADER -->
 	<div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 hidden">
 		<!-- Контейнер логотипа -->
@@ -1526,7 +1549,6 @@
 			0%
 		</div>
 	</div>
-
 	<script type="module" src="/src/main.ts"></script>
 </body>
 
