@@ -240,9 +240,25 @@ button:focus-visible {
 	@apply text-center font-mak leading-[1.2] md:leading-[1.1];
 }
 
+.text-32-48 {
+	font-size: clamp(2rem, 1.7429rem + 1.1429vw, 3rem);
+}
+
+.text-32-40 {
+	font-size: clamp(2rem, 1.8714rem + 0.5714vw, 2.5rem);
+}
+
 .title-36-96 {
 	font-size: clamp(2.25rem, 1.2857rem + 4.2857vw, 6rem);
 	@apply text-center font-mak leading-[1.2] md:leading-[1.1];
+}
+
+.text-20-32 {
+	font-size: clamp(1.25rem, 1.0571rem + 0.8571vw, 2rem);
+}
+
+.text-18-32 {
+	font-size: clamp(1.125rem, 0.9rem + 1vw, 2rem);
 }
 
 .text-14-28 {
@@ -258,6 +274,11 @@ button:focus-visible {
 .text-16-20 {
 	font-size: clamp(1rem, 0.9357rem + 0.2857vw, 1.25rem);
 }
+
+.text-20-24 {
+	font-size: clamp(1.25rem, 1.1857rem + 0.2857vw, 1.5rem);
+}
+
 .text-14-20 {
 	font-size: clamp(0.875rem, 0.7786rem + 0.4286vw, 1.25rem);
 }
@@ -293,6 +314,10 @@ button:focus-visible {
 	padding-top: clamp(3.5rem, 2.3429rem + 5.1429vw, 8rem);
 	padding-bottom: clamp(3.5rem, 2.3429rem + 5.1429vw, 8rem);
 }
+.py-56-156 {
+	padding-top: clamp(3.5rem, 1.8929rem + 7.1429vw, 9.75rem);
+	padding-bottom: clamp(3.5rem, 1.8929rem + 7.1429vw, 9.75rem);
+}
 
 .pb-56-96 {
 	padding-bottom: clamp(3.5rem, 2.8571rem + 2.8571vw, 6rem);
@@ -307,8 +332,53 @@ button:focus-visible {
 	gap: clamp(1.5rem, 1.2429rem + 1.1429vw, 2.5rem);
 }
 
+.gap-8-32 {
+	gap: clamp(0.5rem, 0.1143rem + 1.7143vw, 2rem);
+}
+
 /* Size */
 .size-40-62 {
 	width: clamp(2.25rem, 1.8321rem + 1.8571vw, 3.875rem);
 	height: clamp(2.25rem, 1.8321rem + 1.8571vw, 3.875rem);
+}
+
+/* Scroll */
+
+/* ---------------------------------------------------- */
+/* 1. Стили для WebKit-браузеров (Chrome, Edge, Safari) */
+/* ---------------------------------------------------- */
+
+/* Стилизация всего скроллбара для элементов с классом custom-scroll */
+.custom-scroll::-webkit-scrollbar {
+	/* Ширина вертикального скроллбара */
+	width: 10px;
+	/* Высота горизонтального скроллбара */
+	height: 10px;
+}
+
+/* Стилизация дорожки скроллбара (ФОН: bg-zinc-800) */
+.custom-scroll::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Стилизация ползунка (БЕГУНОК: Золотой) */
+.custom-scroll::-webkit-scrollbar-thumb {
+	background-color: rgba(230, 194, 117, 0.4);
+	border-radius: 100%;
+}
+
+/* Стиль ползунка при наведении */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(230, 194, 117, 0.4);
+}
+
+/* ---------------------------------- */
+/* 2. Стили для Firefox */
+/* ---------------------------------- */
+
+.custom-scroll {
+	/* Формат: <цвет ползунка> <цвет дорожки> */
+	scrollbar-color: rgba(230, 194, 117, 0.4) transparent;
+	/* Скроллбар будет тонким */
+	scrollbar-width: thin;
 }
