@@ -6,7 +6,6 @@ let isOpen = false;
 const menu = document.getElementById("mobileMenu")!;
 const toggleBtn = document.getElementById("menuToggle")!;
 const menuCloseBtn = document.getElementById("menu_close_btn")!;
-const body = document.body;
 
 // Убираем overlay из timeline — он теперь отдельно!
 const menuTl = gsap.timeline({ paused: true });

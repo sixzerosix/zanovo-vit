@@ -1,7 +1,5 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './scripts/counter.ts'
+// unused demo assets removed to satisfy strict TS checks
 import Lenis from 'lenis'
 import { heroTitle } from './scripts/motions/motions.ts'
 import { mapMotion } from './scripts/motions/map.ts'
@@ -9,6 +7,7 @@ import { initMotionText } from './scripts/motions/text.ts'
 import { parallaxUniversal } from './scripts/motions/paralax.ts'
 import { curtainPanel } from './scripts/motions/curtain.ts'
 import { initHeaderAnimations } from './scripts/motions/header.ts'
+// @ts-ignore: alpinejs has no types in this project (shimed in src/types.d.ts)
 import Alpine from 'alpinejs'
 import { initTextLiftHover, initTextPressUp } from './scripts/motions/texthover.ts'
 import { initMotionBlocks } from './scripts/motions/block.ts'
@@ -17,6 +16,7 @@ import "./scripts/motions/overlay.ts"
 import "./scripts/motions/modal.ts"
 import "./scripts/motions/marquee.ts"
 import "./scripts/motions/playvideo.ts"
+import "./scripts/motions/sendform.ts"
 import { CookieConsentManager } from './scripts/motions/cookie.ts'
 import { AgeVerificationManager } from './scripts/motions/ageverification.ts'
 import "./scripts/motions/preloader.ts"
@@ -67,8 +67,8 @@ lenis.on('scroll', (e) => {
 document.addEventListener("DOMContentLoaded", () => {
 
 
-	const title = document.querySelector('.main-title')
-	heroTitle(title)
+	const title = document.querySelector('.main-title') as HTMLDivElement | null
+	if (title) heroTitle(title)
 	const cookieManager = new CookieConsentManager();
 	cookieManager.init();
 	const ageGate = new AgeVerificationManager();

@@ -24,6 +24,6 @@ export function mapMotion() {
 	});
 
 	flags.forEach((flag, i) => {
-		tl.from(flag, {}, i * 0.15);
+		tl.from(flag as gsap.TweenTarget, {}, i * 0.15);
 	});
 }

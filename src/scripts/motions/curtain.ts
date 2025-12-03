@@ -3,7 +3,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function curtainPanel() {
-	document.querySelectorAll(".curtain-panel").forEach(panel => {
+	document.querySelectorAll(".curtain-panel").forEach(element => {
+		const panel = element as HTMLElement;
 		const wrapper = panel.parentElement!;
 		wrapper.style.overflow = "hidden";
 		if (getComputedStyle(wrapper).position === "static") {

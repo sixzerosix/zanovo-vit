@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 // -----------------------------
 // Карта анимаций для блоков
 // -----------------------------
-const animations = {
+const animations: Record<string, (els: Element[]) => gsap.core.Tween> = {
 	// Плавное появление снизу
 	fadeup: (els: Element[]) =>
 		gsap.fromTo(
@@ -153,7 +153,7 @@ export function initMotionBlocks() {
 		// 3. Создаём ScrollTrigger
 		ScrollTrigger.create({
 			trigger: triggerEl,
-			start: triggerEl.dataset.start || "top 85%",
+			start: (triggerEl as HTMLElement).dataset.start || "top 85%",
 			once: true,
 			onEnter: () => animateFn(targets),
 		});

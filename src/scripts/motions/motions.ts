@@ -19,7 +19,7 @@ gsap.to("#wnatages", {
 
 const wnatagesCards = document.querySelectorAll(`#wnatages > div`);
 
-wnatagesCards.forEach((triggerEl) => {
+wnatagesCards.forEach((_triggerEl) => {
 
 
 	// Начальные стили
@@ -107,8 +107,8 @@ export function heroTitle(titleElement: HTMLDivElement) {
 	try {
 
 		// Main title test
-		function splitWordsToSpans(el) {
-			const text = el.textContent.trim();
+		function splitWordsToSpans(el: HTMLElement) {
+			const text = (el.textContent || '').trim();
 			// Разбиваем по пробелам, но сохраняем последовательность пробелов/символов
 			// Простая техника: split по " " и потом соединяем с &nbsp; при вставке.
 			const words = text.split(/\s+/);

@@ -4,27 +4,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // Бережно обрабатываем текст, сохраняя HTML
-function wrapWordsInNode(root) {
+function wrapWordsInNode(root: HTMLElement) {
 	const walker = document.createTreeWalker(
 		root,
 		NodeFilter.SHOW_TEXT,
-		null,
-		false
+		null
 	);
 
-	const textNodes = [];
-	let node;
-	while (node = walker.nextNode()) {
+	const textNodes: Node[] = [];
+	let node: Node | null;
+	while ((node = walker.nextNode())) {
 		textNodes.push(node);
 	}
 
 	textNodes.forEach(textNode => {
-		const parent = textNode.parentNode;
+		const parent = textNode.parentNode as Element | null;
 
 		// Важно: не трогаем текст внутри уже обёрнутых span'ов с классом motion-word
-		if (parent.closest('.motion-word')) return;
+		if (parent && parent.closest && parent.closest('.motion-word')) return;
 
-		const text = textNode.textContent;
+		const text = textNode.textContent || '';
 		const words = text.split(/(\s+)/); // ← сохраняем пробелы как отдельные элементы!
 
 		if (words.length === 1 && !words[0].trim()) {
@@ -47,12 +46,12 @@ function wrapWordsInNode(root) {
 			}
 		});
 
-		textNode.replaceWith(fragment);
+		(textNode as ChildNode).replaceWith(fragment);
 	});
 }
 
 // Карта анимаций (можно добавлять свои)
-const animations = {
+const animations: Record<string, (words: NodeListOf<Element>) => gsap.core.Tween> = {
 	"fadeup": (words) =>
 		gsap.fromTo(
 			words,
@@ -62,7 +61,7 @@ const animations = {
 				opacity: 1,
 				stagger: 0.09,
 				duration: 0.9,
-				ease: "power3.out",
+				ease: "power3.out"
 			}
 		),
 
@@ -82,23 +81,25 @@ const animations = {
 
 // Инициализация
 export function initMotionText() {
-	const elements = document.querySelectorAll("[class*='motion-text-']");
+	const elements = document.querySelectorAll<HTMLElement>("[class*='motion-text-']");
 
 	elements.forEach((el) => {
 		const cls = [...el.classList].find(c => c.startsWith("motion-text-"));
+		if (!cls) return;
 		const animationName = cls.replace("motion-text-", "");
 
-		if (!animations[animationName]) return;
+		const animation = animations[animationName];
+		if (!animation) return;
 
 		// Не ломаем HTML — обрабатываем вложенные узлы
 		wrapWordsInNode(el);
 
-		const words = el.querySelectorAll(".motion-word");
+		const words = el.querySelectorAll<Element>(".motion-word");
 
 		ScrollTrigger.create({
 			trigger: el,
 			start: "top 85%",
-			onEnter: () => animations[animationName](words),
+			onEnter: () => animation(words),
 			once: true,
 		});
 	});

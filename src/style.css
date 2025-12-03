@@ -390,3 +390,87 @@ button:focus-visible {
 	/* Скроллбар будет тонким */
 	scrollbar-width: thin;
 }
+/* Form */
+/* Стили для лоадера и оверлея */
+.form-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(9, 9, 11, 0.95);
+	display: none; /* ← КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: изначально скрыт */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+	border-radius: inherit;
+}
+
+.form-overlay.active {
+	display: flex; /* ← Показываем только когда active */
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* Лоадер */
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 5px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: #e6c275;
+	animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Галочка */
+.success-checkmark {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: block;
+	stroke-width: 2;
+	stroke: #e6c275;
+	stroke-miterlimit: 10;
+	margin-bottom: 20px;
+	box-shadow: inset 0px 0px 0px #e6c275;
+	animation: fill 0.4s ease-in-out 0.4s forwards,
+		scale 0.3s ease-in-out 0.9s both;
+}
+
+.success-checkmark circle {
+	stroke-dasharray: 166;
+	stroke-dashoffset: 166;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+	stroke: #e6c275;
+	fill: none;
+	animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-checkmark path {
+	transform-origin: 50% 50%;
+	stroke-dasharray: 48;
+	stroke-dashoffset: 48;
+	animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* Состояние disabled для кнопки с градиентом */
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed !important;
+	transform: none !important;
+	filter: grayscale(0.8);
+}

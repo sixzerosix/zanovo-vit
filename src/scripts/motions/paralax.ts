@@ -3,18 +3,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function parallaxUniversal() {
-	gsap.utils.toArray(".parallax-wrapper").forEach((wrapper: HTMLElement) => {
-		const targets = wrapper.querySelectorAll("[data-speed], .will-parallax");
+	gsap.utils.toArray<HTMLElement>(".parallax-wrapper").forEach((wrapper) => {
+		const targets = wrapper.querySelectorAll<HTMLElement>("[data-speed], .will-parallax");
 
-		targets.forEach((el: HTMLElement) => {
+		targets.forEach((el) => {
 			let speed = 1;
 
 			// Читаем скорость
-			if (el.dataset.speed !== undefined) {
-				speed = parseFloat(el.dataset.speed);
+			if ((el as HTMLElement).dataset.speed !== undefined) {
+				speed = parseFloat((el as HTMLElement).dataset.speed || '0');
 			} else if (el.classList.contains("will-parallax")) {
 				const depth = el.closest("[data-depth]")
-					? parseFloat(el.closest("[data-depth]")!.dataset.depth || "1")
+					? parseFloat((el.closest("[data-depth]")! as HTMLElement).dataset.depth || "1")
 					: 1;
 				speed = 1 + 0.3 * depth;
 			}
@@ -28,13 +28,12 @@ export function parallaxUniversal() {
 			// Функция инициализации параллакса
 			const init = () => {
 				const wrapperH = wrapper.offsetHeight;
-				let contentH = el.offsetHeight;
 
 				// Если есть изображение или видео — считаем его реальные размеры
 				if (media) {
-					const naturalH = (media as HTMLImageElement | HTMLVideoElement).naturalHeight
-						|| (media as HTMLVideoElement).videoHeight
-						|| media.offsetHeight;
+					const naturalH = (media instanceof HTMLImageElement ? media.naturalHeight : 0)
+						|| (media instanceof HTMLVideoElement ? media.videoHeight : 0)
+						|| (media as HTMLElement).offsetHeight;
 
 					const scale = media.offsetHeight / naturalH;
 					const visibleH = wrapperH / scale;

@@ -67,12 +67,12 @@ export function initTextPressUp() {
 		if (el.hasAttribute("data-press-ready")) return;
 
 		// Добавляем ::before через JS (чтобы текст был одинаковый)
-		el.style.position = "relative";
-		el.style.overflow = "hidden";
-		el.style.display = "inline-block";
+		(el as HTMLElement).style.position = "relative";
+		(el as HTMLElement).style.overflow = "hidden";
+		(el as HTMLElement).style.display = "inline-block";
 
 		// Создаём псевдоэлемент через стиль
-		el.style.cssText += `
+		(el as HTMLElement).style.cssText += `
             &::before {
                 content: "${el.textContent}";
                 position: absolute;

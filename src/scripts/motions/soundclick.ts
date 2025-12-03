@@ -28,7 +28,7 @@ document.addEventListener("click", (e) => {
 	if (!soundName) return;
 
 	// Поддержка кастомной громкости: data-sound="click1" data-volume="0.8"
-	const volume = target.dataset.volume ? parseFloat(target.dataset.volume) : 0.4;
+	const volume = (target as HTMLElement).dataset.volume ? parseFloat((target as HTMLElement).dataset.volume!) : 0.4;
 
 	const audio = loadSound(soundName);
 	audio.currentTime = 0;     // сбрасываем, чтобы можно было кликать быстро

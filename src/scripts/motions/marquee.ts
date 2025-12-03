@@ -9,8 +9,8 @@ function initMarquee() {
 	const marquees = document.querySelectorAll('.marquee-container');
 
 	marquees.forEach(container => {
+		const containerEl = container as HTMLElement;
 		// Очищаем контейнер от старых клонов перед инициализацией (на случай ресайза)
-		const originalContent = container.querySelector('.marquee-content');
 		// Если мы уже нагенерировали клонов ранее, удаляем их, оставляя только первый (оригинал)
 		const allContents = container.querySelectorAll('.marquee-content');
 		if (allContents.length > 1) {
@@ -20,13 +20,14 @@ function initMarquee() {
 		}
 
 		// Убиваем старые анимации GSAP, связанные с этим контейнером
-		gsap.killTweensOf(container.children);
+		gsap.killTweensOf(containerEl.children as any);
 
-		const content = container.querySelector('.marquee-content');
+		const content = containerEl.querySelector('.marquee-content') as HTMLElement | null;
+		if (!content) return;
 
 		// Параметры
-		const speed = parseFloat(container.dataset.speed) || 20;
-		const direction = container.dataset.direction === 'right' ? 1 : -1;
+		const speed = parseFloat(containerEl.dataset.speed || '') || 20;
+		const direction = containerEl.dataset.direction === 'right' ? 1 : -1;
 
 		// Клонирование
 		// content.offsetWidth включает в себя padding-right (наш фикс)
@@ -34,16 +35,16 @@ function initMarquee() {
 		const cloneAmount = Math.ceil(window.innerWidth / itemWidth) + 1;
 
 		for (let i = 0; i < cloneAmount; i++) {
-			const clone = content.cloneNode(true);
+			const clone = content.cloneNode(true) as HTMLElement;
 			clone.setAttribute('aria-hidden', 'true');
-			container.appendChild(clone);
+			containerEl.appendChild(clone);
 		}
 
 		// Анимация
 		// Используем xPercent: -100, это означает сдвиг на 100% ширины САМОГО ЭЛЕМЕНТА.
 		// Это гораздо надежнее пикселей.
 
-		const tl = gsap.to(container.children, {
+		const tl = gsap.to(containerEl.children as any, {
 			xPercent: direction === -1 ? -100 : 0,
 			// Если идем влево: от 0 до -100%. 
 			// Если вправо: нужно стартовать с -100% и идти к 0.
@@ -54,18 +55,18 @@ function initMarquee() {
 		});
 
 		// Опционально: Пауза
-		if (container.dataset.pauseOnHover === 'true') {
-			container.addEventListener('mouseenter', () => tl.pause());
-			container.addEventListener('mouseleave', () => tl.play());
+		if (containerEl.dataset.pauseOnHover === 'true') {
+			containerEl.addEventListener('mouseenter', () => tl.pause());
+			containerEl.addEventListener('mouseleave', () => tl.play());
 		}
 	});
 }
 
 // Перезапуск при изменении размера окна с debounce (чтобы не грузить проц)
-let resizeTimer;
+let resizeTimer: number | undefined;
 window.addEventListener('resize', () => {
-	clearTimeout(resizeTimer);
-	resizeTimer = setTimeout(() => {
+	if (resizeTimer) window.clearTimeout(resizeTimer);
+	resizeTimer = window.setTimeout(() => {
 		initMarquee();
 	}, 200);
 });

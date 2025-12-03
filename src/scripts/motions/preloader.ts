@@ -24,7 +24,8 @@ window.addEventListener('load', () => {
 			duration: 2.5,
 			ease: "power2.inOut",
 			onUpdate: function () {
-				document.getElementById("preloader_loader_text").innerText = Math.round(this.targets()[0].val) + "%";
+				const el = document.getElementById("preloader_loader_text");
+				if (el) el.innerText = Math.round((this.targets()[0] as any).val) + "%";
 			}
 		}, "start-loading")
 
