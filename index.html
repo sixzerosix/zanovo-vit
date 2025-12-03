@@ -1001,29 +1001,30 @@
 
 	<!-- Боковое меню -->
 	<nav id="mobileMenu"
-		class="fixed top-0 right-0 h-full w-lg max-w-full bg-zinc-950 shadow-2xl translate-x-full z-[9999]">
+		class="border border-zinc-800 fixed top-0 right-0 h-full w-lg max-w-full bg-zinc-950 shadow-2xl translate-x-full z-[9999]">
 
-		<span id="menu_close_btn">
-			<button class="absolute top-4 right-4 text-3xl opacity-30 hover:opacity-100 transition-all cursor-pointer">
-				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M0.5 0.5L8.98528 8.98528M8.98528 8.98528L17.4706 17.4706M8.98528 8.98528L0.5 17.4706M8.98528 8.98528L17.4706 0.5"
-						stroke="#D4D4D8" stroke-linecap="round" />
-				</svg>
 
-			</button>
-		</span>
-		<div class="p-[calc(2vh+2vw+1rem)]">
-			<ul class="space-y-6 text-3xl font-mak">
-				<li class="hover:translate-x-2.5 transition-all duration-300"><a href="#"
+		<div class="p-[calc(1.5vh+2vw+1rem)] text-center">
+			<span class="inline-block mb-7" id="menu_close_btn">
+				<button class="hover:opacity-100 transition-all cursor-pointer">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M0.5 0.5L8.98528 8.98528M8.98528 8.98528L17.4706 17.4706M8.98528 8.98528L0.5 17.4706M8.98528 8.98528L17.4706 0.5"
+							stroke="#D4D4D8" stroke-linecap="round" />
+					</svg>
+				</button>
+			</span>
+			<ul class="space-y-4 text-24-32 font-mak text-center">
+				<li class="hover:-translate-y-1 hover:scale-95 transition-all duration-200"><a href="#"
 						class="block text-golden">Главная</a></li>
-				<li class="hover:translate-x-2.5 transition-all duration-300"><a href="#" class="block text-golden">О
+				<li class="hover:-translate-y-1 hover:scale-95 transition-all duration-200"><a href="#"
+						class="block text-golden">О
 						нас</a>
 				</li>
-				<li class="hover:translate-x-2.5 transition-all duration-300"><a href="#"
+				<li class="hover:-translate-y-1 hover:scale-95	 transition-all duration-200"><a href="#"
 						class="block text-golden">Услуги</a>
 				</li>
-				<li class="hover:translate-x-2.5 transition-all duration-300"><a href="#"
+				<li class="hover:-translate-y-1 hover:scale-95 transition-all duration-200"><a href="#"
 						class="block text-golden">Контакты</a></li>
 			</ul>
 		</div>
