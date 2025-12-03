@@ -3,55 +3,55 @@ import gsap from "gsap";
 window.addEventListener('load', () => {
 	const tl = gsap.timeline({
 		onComplete: () => {
-			// Разблокируем скролл после всей анимации
 			document.body.classList.remove('no-scroll');
 		}
 	});
 
-	// 1. Анимация появления логотипа (части всплывают и проявляются)
-	tl.from(".logo-part", {
-		y: 30,
-		opacity: 0,
-		duration: 1.2,
-		stagger: 0.2, // Задержка между частями
-		ease: "power3.out"
-	})
-		// 2. Одновременно с логотипом показываем текст процентов
-		.to("#loader-text", { opacity: 1, duration: 0.5 }, "-=0.8")
-		// 3. Анимация полоски загрузки (имитация загрузки)
-		.to("#loader-bar", {
-			x: "0%",
-			duration: 1.5,
+	tl
+		.to("#preloader_logo_outline, #preloader_loader_text", {
+			opacity: 1,
+			duration: 0.8,
+			ease: "power2.out"
+		})
+		.to("#preloader_logo_fill_rectangle", {
+			attr: { y: 0, height: 82 },
+			duration: 2.5,
 			ease: "power2.inOut"
-		}, "-=1") // Начинаем чуть раньше конца появления лого
-		// 4. Счетчик процентов (текст)
+		}, "start-loading")
+
 		.to({ val: 0 }, {
 			val: 100,
-			duration: 1.5,
+			duration: 2.5,
 			ease: "power2.inOut",
 			onUpdate: function () {
-				document.getElementById("loader-text").innerText = Math.round(this.targets()[0].val) + "%";
+				document.getElementById("preloader_loader_text").innerText = Math.round(this.targets()[0].val) + "%";
 			}
-		}, "<") // Синхронно с полоской
-		// 5. Убираем логотип и элементы (чуть поднимаем вверх)
-		.to(".logo-part, #loader-bar, #loader-text", {
-			y: -20,
+		}, "start-loading")
+
+		.to("#preloader_loader_bar", {
+			x: "0%",
+			duration: 2.5,
+			ease: "power2.inOut"
+		}, "start-loading")
+		// КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: вместо "svg" используем "#preloader_logo_svg"
+		.to("#preloader_logo_svg, #preloader_loader_text, #preloader_loader_bar", {
+			y: -30,
 			opacity: 0,
 			duration: 0.6,
-			stagger: 0.1,
-			ease: "power2.in"
+			ease: "power2.in",
+			delay: 0.2
 		})
-		// 6. Шторка уезжает вверх (Открытие сайта)
+
 		.to("#preloader", {
 			yPercent: -100,
-			duration: 1.2,
-			ease: "power4.inOut" // Эффект тяжелой шторы
+			duration: 1.0,
+			ease: "power4.inOut"
 		})
-		// 7. Появление контента сайта (параллакс эффект на встречу шторке)
+
 		.to("#main-content", {
 			opacity: 1,
 			y: 0,
 			duration: 1,
 			ease: "power3.out"
-		}, "-=0.8"); // Начинаем, когда шторка еще едет
+		}, "-=0.8");
 });

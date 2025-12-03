@@ -997,7 +997,8 @@
 
 	<!-- Любая модалка -->
 	<div class="modal-form fixed inset-0  items-center justify-center z-[9999] hidden">
-		<div data-modal-content class="bg-zinc-950 p-16 max-w-xl w-full shadow-2xl relative">
+		<div data-modal-content
+			class="bg-zinc-950 p-32-56 max-w-xl w-full shadow-2xl relative border border-zinc-800 max-sm:overflow-auto ">
 			<span data-modal-close>
 				<button
 					class="absolute top-4 right-4 text-3xl opacity-30 hover:opacity-100 transition-all cursor-pointer">
@@ -1010,7 +1011,7 @@
 				</button>
 			</span>
 
-			<h2 class="text-4xl mb-[1em] font-mak text-center">Обратная связь</h2>
+			<h2 class="text-32-40 mb-[1em] font-mak text-center">Обратная связь</h2>
 
 
 
@@ -1067,36 +1068,68 @@
 	</div>
 
 	<!-- PRELOADER -->
-	<div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 hidden">
-		<!-- Контейнер логотипа -->
-		<div class="relative z-10 mb-8 p-4">
-			<!-- SVG Логотип -->
-			<svg class="w-32 h-auto md:w-48" viewBox="0 0 99 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<!-- Path 1: Левая часть -->
-				<path class="logo-part origin-center"
-					d="M53.3516 22C55.0667 27.2764 58.3413 31.9232 62.7607 35.3145C67.5628 38.9992 73.4471 40.9961 79.5 40.9961V41.0762C79.4903 41.9708 79.3103 42.8556 78.9678 43.6826C78.6154 44.5333 78.0993 45.307 77.4482 45.958C76.7972 46.6091 76.0235 47.1252 75.1729 47.4775C74.441 47.7806 73.6641 47.9566 72.875 48H53C49.134 48 46 44.866 46 41H58.6699C58.6129 40.9568 58.5549 40.9147 58.498 40.8711C54.348 37.6867 51.0021 33.6199 48.6787 29H28C24.134 29 21 25.866 21 22H53.3516Z"
-					fill="#E4CDA0" />
-				<!-- Path 2: Правая большая часть -->
-				<path class="logo-part origin-center"
-					d="M69.2646 0C67.5886 1.64058 66.2479 3.61126 65.3389 5.80566C63.8653 9.36326 63.606 13.3078 64.6025 17.0273C65.5992 20.7468 67.7957 24.0337 70.8506 26.3779C73.9056 28.7221 77.6492 29.9932 81.5 29.9932V30H92V28.3438C91.9803 27.149 91.7379 25.9682 91.2803 24.8633C90.8027 23.7102 90.1032 22.6618 89.2207 21.7793C88.3382 20.8968 87.2898 20.1973 86.1367 19.7197C84.9837 19.2422 83.748 18.9961 82.5 18.9961V19H77.5C73.634 19 70.5 15.866 70.5 12H82.5C84.6668 12 86.8126 12.4267 88.8145 13.2559C90.8163 14.0851 92.6349 15.3009 94.167 16.833C95.6991 18.3651 96.9149 20.1837 97.7441 22.1855C98.5095 24.0333 98.9317 26.0037 98.9922 28H99V37H81V36.9951C75.7833 36.8888 70.7314 35.1192 66.585 31.9375C62.3062 28.6543 59.2309 24.0503 57.835 18.8408C57.7601 18.5615 57.6917 18.281 57.627 18H17C13.134 18 10 14.866 10 11H57.0469C57.1294 9.65509 57.3226 8.31716 57.626 7H7C3.13401 7 0 3.86599 0 0H69.2646Z"
-					fill="#E4CDA0" />
-				<!-- Path 3: Маленькая деталь/точка -->
-				<path class="logo-part origin-center"
-					d="M86.5 22C87.8807 22 89 23.1193 89 24.5C89 25.8807 87.8807 27 86.5 27C85.1193 27 84 25.8807 84 24.5C84 23.1193 85.1193 22 86.5 22Z"
-					fill="#E4CDA0" />
+	<div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-zinc-950">
+
+		<div class="relative z-10 mb-2 p-4">
+			<svg id="preloader_logo_svg" class="w-20 h-auto md:w-24" viewBox="0 0 98 82" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+
+				<defs>
+					<radialGradient id="preloader_logo_gradient_main" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+						gradientTransform="translate(48.8 26.1) scale(28.6 90.6)">
+						<stop stop-color="#FFF1D5" />
+						<stop offset="1" stop-color="#AD7200" stop-opacity="0.9" />
+					</radialGradient>
+
+					<clipPath id="preloader_logo_clip_animation">
+						<rect id="preloader_logo_fill_rectangle" x="0" y="82" width="98" height="0" />
+					</clipPath>
+				</defs>
+
+				<g id="preloader_logo_outline" stroke="#FFD176" stroke-width="2" stroke-opacity="0.5">
+					<path
+						d="M68.1741 82H29.4388C29.4388 82 25.615 71.6292 22.4665 65.3086C15.6069 51.5383 0 32.9982 0 32.9982L32.5376 51.9334L48.8064 0L65.4624 51.9353L98 32.9982C98 32.9982 82.3301 51.5559 75.34 65.3086C72.1271 71.6299 68.1741 82 68.1741 82Z" />
+					<path d="M36.4271 39.5113L32.5376 51.9334L32.5346 51.9314L36.4244 39.5086L36.4271 39.5113Z" />
+					<path d="M76.6966 40.886L67.6725 46.1391L64.6168 36.6125L77.4698 25.7699L76.6966 40.886Z" />
+					<path d="M33.2125 36.7993L30.2945 46.1204L20.8097 40.6004L20.1424 25.7699L33.2125 36.7993Z" />
+				</g>
+
+				<g id="preloader_logo_filled" clip-path="url(#preloader_logo_clip_animation)">
+					<path
+						d="M68.1741 82H29.4388C29.4388 82 25.615 71.6292 22.4665 65.3086C15.6069 51.5383 0 32.9982 0 32.9982L32.5376 51.9334L48.8064 0L65.4624 51.9353L98 32.9982C98 32.9982 82.3301 51.5559 75.34 65.3086C72.1271 71.6299 68.1741 82 68.1741 82Z"
+						fill="#FFD176" />
+					<path
+						d="M68.1741 82H29.4388C29.4388 82 25.615 71.6292 22.4665 65.3086C15.6069 51.5383 0 32.9982 0 32.9982L32.5376 51.9334L48.8064 0L65.4624 51.9353L98 32.9982C98 32.9982 82.3301 51.5559 75.34 65.3086C72.1271 71.6299 68.1741 82 68.1741 82Z"
+						fill="url(#preloader_logo_gradient_main)" fill-opacity="0.36" />
+
+					<path d="M36.4271 39.5113L32.5376 51.9334L32.5346 51.9314L36.4244 39.5086L36.4271 39.5113Z"
+						fill="#FFD176" />
+					<path d="M36.4271 39.5113L32.5376 51.9334L32.5346 51.9314L36.4244 39.5086L36.4271 39.5113Z"
+						fill="url(#preloader_logo_gradient_main)" fill-opacity="0.36" />
+
+					<path d="M76.6966 40.886L67.6725 46.1391L64.6168 36.6125L77.4698 25.7699L76.6966 40.886Z"
+						fill="#FFD176" />
+					<path d="M76.6966 40.886L67.6725 46.1391L64.6168 36.6125L77.4698 25.7699L76.6966 40.886Z"
+						fill="url(#preloader_logo_gradient_main)" fill-opacity="0.36" />
+
+					<path d="M33.2125 36.7993L30.2945 46.1204L20.8097 40.6004L20.1424 25.7699L33.2125 36.7993Z"
+						fill="#FFD176" />
+					<path d="M33.2125 36.7993L30.2945 46.1204L20.8097 40.6004L20.1424 25.7699L33.2125 36.7993Z"
+						fill="url(#preloader_logo_gradient_main)" fill-opacity="0.36" />
+				</g>
 			</svg>
 		</div>
 
-		<!-- Полоса загрузки -->
-		<div class="w-32 md:w-48 h-[1px] bg-slate-800 relative overflow-hidden">
-			<div id="loader-bar" class="absolute top-0 left-0 w-full h-full bg-gold transform -translate-x-full"></div>
+		<div id="preloader_loader_text" class="mb-2 text-sm tracking-[0.2em] text-golden font-light opacity-0">0%
 		</div>
 
-		<!-- Проценты (для солидности) -->
-		<div id="loader-text" class="mt-4 text-xs tracking-[0.2em] text-gold font-light opacity-0">
-			0%
-		</div>
+		<!-- <div class="w-32 md:w-48 h-[1px] bg-zinc-800 relative overflow-hidden">
+			<div id="preloader_loader_bar"
+				class="absolute top-0 left-0 w-full h-full bg-[#FFD176] transform -translate-x-full">
+			</div>
+		</div> -->
 	</div>
+
 	<script type="module" src="/src/main.ts"></script>
 </body>
 

@@ -248,6 +248,10 @@ button:focus-visible {
 	font-size: clamp(2rem, 1.8714rem + 0.5714vw, 2.5rem);
 }
 
+.text-24-32 {
+	font-size: clamp(1.5rem, 1.3714rem + 0.5714vw, 2rem);
+}
+
 .title-36-96 {
 	font-size: clamp(2.25rem, 1.2857rem + 4.2857vw, 6rem);
 	@apply text-center font-mak leading-[1.2] md:leading-[1.1];
@@ -290,7 +294,11 @@ button:focus-visible {
 
 /* Padding */
 .p-20-48 {
-	padding: ;
+	padding: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+}
+
+.p-32-56 {
+	padding: clamp(2rem, 1.6143rem + 1.7143vw, 3.5rem);
 }
 
 .px-20-48 {

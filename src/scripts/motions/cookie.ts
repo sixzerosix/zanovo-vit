@@ -85,7 +85,7 @@ export class CookieConsentManager {
 		// Базовые классы для позиционирования и анимации
 		// Обрати внимание: начинаем с opacity-0 и translate-y-8 для анимации входа
 		this.container.className = `
-      fixed bottom-[calc(1rem+1vh+1vw)] right-[calc(1rem+1vh+1vw)] z-[9999]
+      fixed bottom-0 max-md:left-0 right-0 md:bottom-[calc(1rem+1vh+1vw)] md:right-[calc(1rem+1vh+1vw)] z-[9990]
       flex items-center justify-center
       transition-all duration-500 ease-out transform
       opacity-0 translate-y-8 pointer-events-none
@@ -94,7 +94,7 @@ export class CookieConsentManager {
 		// Вставляем HTML (Sanitized string)
 		this.container.innerHTML = `
 		<div class="border border-zinc-800">
-			<div class="bg-zinc-950 p-12 max-w-xl w-full relative text-center">
+			<div class="bg-zinc-950 p-32-56 md:max-w-xl w-full relative text-center">
 				<button id="cookie-close-btn" class="absolute top-4 right-4 text-3xl opacity-30 hover:opacity-100 transition-all cursor-pointer">
 					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -102,7 +102,7 @@ export class CookieConsentManager {
 							stroke="#D4D4D8" stroke-linecap="round" />
 					</svg>
 				</button>
-				<h2 class="text-4xl mb-[0.5em] font-mak">Мы используем куки</h2>
+				<h2 class="text-32-40 mb-[0.5em] font-mak">Мы используем куки</h2>
 				<p class="text-zinc-500 text-sm mb-8 leading-relaxed">
 					Это помогает нам делать сайт лучше. Оставаясь здесь, вы соглашаетесь с нашей политикой.
 				</p>
